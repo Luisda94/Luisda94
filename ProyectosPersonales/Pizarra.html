@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dibujo en Canvas</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: rgb(31, 94, 83);
+        }
+
+        h1, h2, p {
+            text-align: center;
+            color: rgba(98, 255, 138, 0.9);
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        main {
+            flex: 1;
+            border: 7px solid rgb(61, 148, 104);
+            padding: 10px;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        canvas {
+            border: 10px solid rgba(60, 145, 102, 0.144);
+            display: block;
+            margin: 0 auto;
+        }
+
+        #tools {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        #colorPicker {
+            margin: 5px;
+        }
+
+        #clearButton, #imageButton {
+            margin: 5px;
+            padding: 10px;
+            background-color: rgba(10, 199, 189, 0.76);
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #imageButton {
+            background-color: rgba(98, 0, 255, 0.616);
+        }
+
+        #thicknessSlider {
+            margin: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(31, 94, 83, 0.9);
+            color: rgba(98, 255, 138, 0.9);
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Alternando color con un click ¡yeah!</h1>
+        <h2>Instrucciones</h2>
+        <p>Dando click en el recuadro negro podrás cambiar el color.<br>
+             Para cambiar el tamaño del dibujo, ajusta la línea horizontal azul al lado del cuadro negro (selector de color).<br>
+            Se limpia la pizarra refrescando o dando en limpiar canvas.<br>
+        Si deseas, puedes agregar una imagen; la función de guardar imagen está en construcción.</p>
+        <div id="tools">
+            <input type="color" id="colorPicker" value="#000000">
+            <input type="range" id="thicknessSlider" min="1" max="20" value="5">
+            <button id="clearButton">Limpiar Pizarra</button>
+            <input type="file" id="imageUploader" accept="image/*" style="display: none;">
+            <button id="imageButton">Agregar Imagen</button>
+        </div>
+        <canvas id="myCanvas" width="1366" height="599"></canvas>
+    </main>
+    
+    <footer>
+        <h3>Sean creativos!</h3>
+    </footer>
+
+    <script>
+        var pantalla = document.getElementById("myCanvas");
+        var pincel = pantalla.getContext("2d");
+        var colorPicker = document.getElementById("colorPicker");
+        var thicknessSlider = document.getElementById("thicknessSlider");
+        var clearButton = document.getElementById("clearButton");
+        var imageButton = document.getElementById("imageButton");
+        var imageUploader = document.getElementById("imageUploader");
+
+        var colores = ["blue", "red", "green"];
+        var indiceColorActual = 0;
+        var dibujando = false;
+        var ultimaX, ultimaY;
+        var anchoLinea = parseInt(thicknessSlider.value, 10);
+
+        function ajustarTamanioCanvas() {
+            pantalla.width = window.innerWidth;
+            pantalla.height = window.innerHeight - document.querySelector("footer").offsetHeight;
+            pincel.fillStyle = "lightcyan";
+            pincel.fillRect(0, 0, pantalla.width, pantalla.height);
+        }
+
+        function dibujarCirculo(x, y) {
+            pincel.fillStyle = colorPicker.value;
+            pincel.beginPath();
+            pincel.arc(x, y, anchoLinea / 2, 0, 2 * Math.PI);
+            pincel.fill();
+        }
+
+        function dibujarLinea(x1, y1, x2, y2) {
+            pincel.strokeStyle = colorPicker.value;
+            pincel.lineWidth = anchoLinea;
+            pincel.beginPath();
+            pincel.moveTo(x1, y1);
+            pincel.lineTo(x2, y2);
+            pincel.stroke();
+        }
+
+        function dibujar(evento) {
+            if (!dibujando) return;
+
+            var x = evento.pageX - pantalla.offsetLeft;
+            var y = evento.pageY - pantalla.offsetTop;
+
+            if (ultimaX !== undefined && ultimaY !== undefined) {
+                dibujarLinea(ultimaX, ultimaY, x, y);
+            }
+
+            dibujarCirculo(x, y);
+            ultimaX = x;
+            ultimaY = y;
+        }
+
+        function terminarDibujo() {
+            dibujando = false;
+        }
+
+        function cambiarColor() {
+            colorPicker.value = colores[indiceColorActual];
+            indiceColorActual = (indiceColorActual + 1) % colores.length;
+        }
+
+        function limpiarCanvas() {
+            pincel.clearRect(0, 0, pantalla.width, pantalla.height);
+            ajustarTamanioCanvas();
+        }
+
+        function agregarImagen(evento) {
+            var archivo = evento.target.files[0];
+            var lector = new FileReader();
+
+            lector.onload = function (e) {
+                var img = new Image();
+                img.onload = function () {
+                    pincel.drawImage(img, 0, 0, pantalla.width, pantalla.height);
+                };
+                img.src = e.target.result;
+            };
+
+            lector.readAsDataURL(archivo);
+        }
+
+        ajustarTamanioCanvas();
+
+        pantalla.addEventListener('mousedown', function (evento) {
+            dibujando = true;
+            ultimaX = evento.pageX - pantalla.offsetLeft;
+            ultimaY = evento.pageY - pantalla.offsetTop;
+        });
+
+        pantalla.addEventListener('mousemove', dibujar);
+        pantalla.addEventListener('mouseup', terminarDibujo);
+        pantalla.addEventListener('mouseleave', terminarDibujo);
+
+        colorPicker.addEventListener('input', function () {
+            colorPicker.value = colorPicker.value;
+        });
+
+        thicknessSlider.addEventListener('input', function () {
+            anchoLinea = parseInt(thicknessSlider.value, 10);
+        });
+
+        clearButton.addEventListener('click', limpiarCanvas);
+        imageButton.addEventListener('click', function () {
+            imageUploader.click();
+        });
+        imageUploader.addEventListener('change', agregarImagen);
+
+        pantalla.addEventListener('contextmenu', function (evento) {
+            evento.preventDefault();
+            cambiarColor();
+        });
+
+        window.addEventListener('resize', ajustarTamanioCanvas);
+    </script>
+</body>
+</html>
+
