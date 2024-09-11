@@ -36,7 +36,8 @@ body {
 /* Mostrar el contenido cuando está activo */
 .active + .content {
     display: block;
-/* Contenedor principal que mantiene el contenido centrado */
+}
+
 .container {
     width: 80%; /* Ancho del contenedor al 80% del ancho de la ventana */
     margin: auto; /* Centra el contenedor horizontalmente */
