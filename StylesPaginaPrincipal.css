@@ -11,7 +11,31 @@ body {
     background-color: #f4f4f4; /* Color de fondo gris claro para toda la página, neutro y suave */
     line-height: 1.6; /* Aumenta el espacio entre líneas para mejorar la legibilidad */
 }
+/* Estilo para el botón del menú desplegable */
+.collapsible-button {
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    margin: 5px 0;
+}
 
+/* Estilo para el contenido oculto */
+.content {
+    display: none; /* Inicialmente oculto */
+    overflow: hidden;
+    padding: 0 18px;
+    background-color: #f1f1f1;
+}
+
+/* Mostrar el contenido cuando está activo */
+.active + .content {
+    display: block;
 /* Contenedor principal que mantiene el contenido centrado */
 .container {
     width: 80%; /* Ancho del contenedor al 80% del ancho de la ventana */
@@ -149,5 +173,10 @@ footer {
 
     .container {
         width: 95%; /* Ajusta el ancho del contenedor para que ocupe un poco más del ancho disponible */
+    }
+}
+ 
+    .collapsible-button {
+        font-size: 16px;
     }
 }
