@@ -134,8 +134,14 @@
         function dibujar(evento) {
             if (!dibujando) return;
 
-            var x = evento.pageX - pantalla.offsetLeft;
-            var y = evento.pageY - pantalla.offsetTop;
+            var x, y;
+            if (evento.touches) {
+                x = evento.touches[0].pageX - pantalla.offsetLeft;
+                y = evento.touches[0].pageY - pantalla.offsetTop;
+            } else {
+                x = evento.pageX - pantalla.offsetLeft;
+                y = evento.pageY - pantalla.offsetTop;
+            }
 
             if (ultimaX !== undefined && ultimaY !== undefined) {
                 dibujarLinea(ultimaX, ultimaY, x, y);
@@ -187,6 +193,15 @@
         pantalla.addEventListener('mouseup', terminarDibujo);
         pantalla.addEventListener('mouseleave', terminarDibujo);
 
+        pantalla.addEventListener('touchstart', function (evento) {
+            dibujando = true;
+            ultimaX = evento.touches[0].pageX - pantalla.offsetLeft;
+            ultimaY = evento.touches[0].pageY - pantalla.offsetTop;
+        });
+
+        pantalla.addEventListener('touchmove', dibujar);
+        pantalla.addEventListener('touchend', terminarDibujo);
+
         colorPicker.addEventListener('input', function () {
             colorPicker.value = colorPicker.value;
         });
@@ -210,4 +225,3 @@
     </script>
 </body>
 </html>
-
