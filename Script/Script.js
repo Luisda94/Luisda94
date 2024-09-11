@@ -1,12 +1,17 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+    // Manejo del enlace de descarga
     const downloadLink = document.getElementById('downloadLink');
-    downloadLink.addEventListener('click', function(event) {
-        const userChoice = confirm("El archivo PDF se abrirá en una nueva pestaña. ¿Desea continuar?");
-        if (!userChoice) {
-            event.preventDefault();
-        
-document.addEventListener('DOMContentLoaded', function() {
+    if (downloadLink) {
+        downloadLink.addEventListener('click', function(event) {
+            const userChoice = confirm("El archivo PDF se abrirá en una nueva pestaña. ¿Desea continuar?");
+            if (!userChoice) {
+                event.preventDefault();
+            }
+        });
+    }
+
+    // Manejo de botones colapsables
     const collapsibles = document.querySelectorAll('.collapsible-button');
     collapsibles.forEach(button => {
         button.addEventListener('click', function() {
@@ -20,5 +25,4 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-
 </script>
