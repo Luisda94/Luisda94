@@ -116,12 +116,12 @@ header a:hover {
 .section {
     padding: 20px; /* Añade relleno alrededor del contenido de cada sección */
     margin: 20px 0; /* Añade margen vertical entre secciones */
-    background: #d5dbfc; /* Color de fondo blanco para las secciones */
-    color: #2c3e50; /* Color del texto oscuro para contraste */
+    background: #111e2b; /* Color de fondo blanco para las secciones */
+    color: #fefeff; /* Color del texto oscuro para contraste */
 }
 
 .dark {
-    background: #2c3e50; /* Color de fondo oscuro azul-grisáceo para las secciones con clase .dark */
+    background: rgba(49, 49, 54, 0.836); /* Color de fondo oscuro azul-grisáceo para las secciones con clase .dark */
     color: #ecf0f1; /* Color del texto blanco grisáceo */
     padding: 15px 0; /* Relleno vertical de 15px */
 }
@@ -148,7 +148,7 @@ header a:hover {
 
 /* Estilos para el pie de página */
 footer {
-    background: #2c3e50; /* Color de fondo oscuro azul-grisáceo para el pie de página */
+    background: #111e2b; /* Color de fondo oscuro azul-grisáceo para el pie de página */
     color: #ecf0f1; /* Color del texto blanco grisáceo */
     text-align: center; /* Centra el texto horizontalmente */
     padding: 10px; /* Añade relleno alrededor del contenido del pie de página */
@@ -174,12 +174,17 @@ footer {
 }
 
 .dark-theme .section {
-    background: #34495e;
+        padding: 20px; /* Añade relleno alrededor del contenido de cada sección */
+        margin: 20px 0; /* Añade margen vertical entre secciones */
+        background: #111e2b; /* Color de fondo blanco para las secciones */
+        color: #fefeff; /* Color del texto oscuro para contraste */
+    
 }
 
 /* Tema Claro */
 .light-theme {
     background-color: #f4f4f4;
+    background: url('ImgWhite.jpg') repeat;
     color: #2c3e50;
 }
 
@@ -187,6 +192,8 @@ footer {
     background: #ecf0f1;
     color: #2c3e50;
 }
+.light-theme header a {
+    color: black;}
 
 .light-theme .collapsible-button {
     background-color: #3498db;
@@ -194,8 +201,9 @@ footer {
 }
 
 .light-theme #showcase {
-    background: url('imagenf.png') repeat;
+    background: url('ImgWhite.jpg') repeat;
     background-size: cover;
+    color: black;
 }
 
 .light-theme .section {
