@@ -1,4 +1,3 @@
-<script>
 document.addEventListener('DOMContentLoaded', function() {
     // Manejo del enlace de descarga
     const downloadLink = document.getElementById('downloadLink');
@@ -25,4 +24,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-</script>
+document.getElementById('theme-toggle').addEventListener('click', function() {
+    const body = document.body;
+    body.classList.toggle('dark-theme');
+    body.classList.toggle('light-theme');
+
+    // Cambiar el texto del botón según el tema activo
+    if (body.classList.contains('dark-theme')) {
+        this.textContent = 'Modo Claro';
+    } else {
+        this.textContent = 'Modo Oscuro';
+    }
+});
