@@ -29,10 +29,20 @@ document.getElementById('theme-toggle').addEventListener('click', function() {
     body.classList.toggle('dark-theme');
     body.classList.toggle('light-theme');
 
-    // Cambiar el texto del botón según el tema activo
+    // Seleccionar el elemento <i> dentro del botón
+    let icon = this.querySelector('i');
+
+    // Si no existe, crearlo
+    if (!icon) {
+        icon = document.createElement('i');
+        this.textContent = ''; // Limpiar cualquier texto
+        this.appendChild(icon);
+    }
+
+    // Cambiar el ícono según el tema activo
     if (body.classList.contains('dark-theme')) {
-        this.textContent = 'Modo Claro';
+        icon.className = 'fas fa-sun'; // Cambiar a icono de sol
     } else {
-        this.textContent = 'Modo Oscuro';
+        icon.className = 'fas fa-moon'; // Cambiar a icono de luna
     }
 });
