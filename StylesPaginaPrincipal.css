@@ -9,7 +9,7 @@ body, h1, h2, h3, p, ul {
 body {
     
     font-family: 'Arial', sans-serif; /* Usa Arial como fuente principal; si no está disponible, usa cualquier fuente sans-serif */
-    background-color: #ffffff; /* Color de fondo gris claro para toda la página, neutro y suave */
+    background-color: #0a0909; /* Color de fondo gris claro para toda la página, neutro y suave */
     line-height: 1.6; /* Aumenta el espacio entre líneas para mejorar la legibilidad */
     background: url('imagenf.png') repeat
 }
@@ -139,12 +139,11 @@ header a:hover {
 }
 
 .section li {
-    background: #ffffff; /* Color de fondo blanco para los elementos de la lista */
-    color: #2c3e50; /* Color del texto oscuro para contraste */
+    background: #111e2b; /* Color de fondo blanco para los elementos de la lista */
+    color: #3498db; /* Color del texto oscuro para contraste */
     margin-bottom: 10px; /* Añade margen inferior entre los elementos de la lista */
     padding: 10px; /* Añade relleno alrededor del contenido de los elementos de la lista */
-    border-left: #3498db 5px solid; /* Borde izquierdo azul claro para resaltar cada elemento */
-}
+   }
 
 /* Estilos para el pie de página */
 footer {
@@ -180,7 +179,22 @@ footer {
         color: #fefeff; /* Color del texto oscuro para contraste */
     
 }
+.dark-theme #navbar {
+    background-color: #343a40; /* Fondo oscuro */
+    color: #ffffff;          /* Texto blanco */
+    border-color: #444;      /* Borde más oscuro */
+}
+.dark-theme a {
+    
+    color: #ffffff; /* Color del texto blanco */
+    text-decoration: none; /* Sin subrayado */
+}
 
+.dark-theme a:hover {
+    
+    color: #adb5bd; /* Color del texto al pasar el mouse */
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
 /* Tema Claro */
 .light-theme {
     background-color: #f4f4f4;
@@ -207,10 +221,30 @@ footer {
 }
 
 .light-theme .section {
-    background: #ffffff;
+    background: #ecf0f1b6;
     color: #2c3e50;
 }
 
+.light-theme section li {
+    background: #ecf0f1; /* Color de fondo blanco para los elementos de la lista */
+    color: #2c3e50; /* Color del texto oscuro para contraste */
+    margin-bottom: 10px; /* Añade margen inferior entre los elementos de la lista */
+    padding: 10px; /* Añade relleno alrededor del contenido de los elementos de la lista */
+   }
+   .light-theme #navbar {
+    background-color: #f8f9fa; /* Fondo claro */
+    color: #212529;           /* Texto oscuro */
+    border-color: #e9ecef;    /* Borde más claro */
+}
+.light-theme a {
+   
+    color: #037af1; /* Color del texto oscuro */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.light-theme a:hover {
+    color: #495057; /* Color del texto al pasar el mouse */
+    text-decoration: underline; /* Subrayado al pasar el mouse */
 .light-theme footer {
     background: #ecf0f1;
     color: #2c3e50;

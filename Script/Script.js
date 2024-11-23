@@ -8,6 +8,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 event.preventDefault();
             }
         });
+        function confirmAction() {
+            return confirm("El archivo PDF se abrirá en una nueva pestaña. ¿Desea continuar?");
+        }
+        
     }
 
     // Manejo de botones colapsables

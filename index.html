@@ -5,30 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="FullStackJunior" />
     <meta name="author" content="Luis Daniel Diaz Navas"/>
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-   
-
+ 
     <title>Luis Diaz - FullStackJunior</title>
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+   
+    <link rel="stylesheet" href="/ProyectosPersonales/styles.css">
     <link rel="stylesheet" href="StylesPaginaPrincipal.css">
     <script src="Script/Script.js" defer></script>
-    <script src="https://use.fontawesome.com/releases/v6.4.2/js/all.js" crossorigin="anonymous"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://use.fontawesome.com/releases/v6.4.2/js/all.js" crossorigin="anonymous"></script><!--pra los iconos-->
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- FontAwesome CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
 
 </head>
 <body>
     <!-- Encabezado de la página -->
     <header>
-        <div class="container">
+      <!--    <div class="container">
             
             <div id="branding">
-                <button id="theme-toggle" class="btn btn-secondary">
+               <button id="theme-toggle" class="btn btn-secondary">
                     <i class="fas fa-moon"></i>
-                  </button>
+                  </button> -->
                   
             
-                <h1><span class="highlight">Luis Diaz</span> - Soporte Técnico/Programador             <div class="social-icons">
-                    <a class="social-icon" target="_ blank"
+                <h1><span class="highlight">Luis Diaz</span> - Soporte Técnico/Programador    
+<!--                     <a class="social-icon" target="_ blank"
                         href="https://www.linkedin.com/in/luis-daniel-diaz-navas-b74039156/?trk=opento_nprofile_details"><i
                             class="fab fa-linkedin-in"></i></a>
                     <a class="social-icon" target="_ blank" href="https://github.com/Luisda94"><i
@@ -36,10 +46,11 @@
                     <a class="social-icon" target="_ blank" href="@LuisDanielDazN3"><i
                             class="fa-brands fa-x-twitter"></i></a>
                 </div>
-        </div></h1>
-           
+        </div> --></h1>
+    </header>
+
             
-            <nav>
+          <!--   <nav>
                 
                 <ul>
                     <li class="current"><a href="#about">Acerca de mí</a></li>
@@ -52,15 +63,59 @@
                 
             </nav>
         </div> </div>
-    </div>
-    </header>
-
+    </div> -->
+    <nav id="navbar" class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+        <div class="container-fluid">
+            <!-- Botón de menu -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand"  href="#">Menu</a><span class="navbar-toggler-icon"></span> 
+            </button>
+            
+            <!-- Iconos de redes sociales y botón de cambio de tema -->
+            <div class="social-icons">
+                <a class="social-icon" target="_blank" href="https://www.linkedin.com/in/luis-daniel-diaz-navas-b74039156/?trk=opento_nprofile_details"><i class="fab fa-linkedin-in"></i></a>
+                <a class="social-icon" target="_blank" href="https://github.com/Luisda94"><i class="fab fa-github"></i></a>
+                <a class="social-icon" target="_blank" href="@LuisDanielDazN3"><i class="fa-brands fa-x-twitter"></i></a>
+                <!-- Botón de cambio de tema -->
+                <button id="theme-toggle" class="btn btn-secondary">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+    
+            <!-- Menú de navegación -->
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Acerca de mí</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#certifications">Certificaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experiencia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">Educación</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://luisda94.github.io/Luisda94/ProyectosPersonales/proyectos.html">Proyectos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+  
     <!-- Sección de presentación -->
+     <main>
     <section id="showcase">
         <div class="container">
             <h1>Bienvenido a mi página</h1>
-            <p>Soporte técnico y programador con experiencia en desarrollo web y administración de redes.</p>
-        </div>
+            <p> Soy un desarrollador con experiencia en lenguajes de programación como HTML5, CSS3, JavaScript, Java, Python, SQL, y con conocimientos en análisis de datos, estadísticas y Oracle. Tengo una sólida comprensión de la administración de redes locales y en la nube, siempre enfocado en la aplicación de metodologías ágiles para optimizar procesos de desarrollo y asegurar la calidad del software.
+            </div>
     </section>
 
     <!-- Sección Acerca de mí -->
@@ -69,27 +124,101 @@
         <div class="container">
             <h2>Acerca de mí</h2>
             <p>
-                Poseo capacidad analítica, afable, actitud positiva, diligente, responsable, perseverante, habilidad para trabajar bajo presión, también cuento con experiencia de trabajo en equipo enfocado en encontrar soluciones a cada dificultad que se presente, Orientado a lograr de forma proactiva el cumplimiento de las metas impuesta en el área a desempeñar.
-            </p>
-            <p>
-                Conocimiento en lenguajes de marcado, programación y de análisis de datos tales como, HTML5, CSS3, JavaScript, Java, Python, SQL, así como conocimientos en estadísticas, en la interfaz de Oracle y el uso intensivo sobre la administración de redes (locales y en la nube) para el desarrollo de software.
+                Soy un profesional con una gran capacidad analítica, actitud positiva y habilidades para trabajar en equipo, siempre orientado a encontrar soluciones creativas ante desafíos. Me destaco por mi habilidad para adaptarme y resolver contratiempos de forma eficiente, incluso bajo presión, con una mentalidad proactiva y perseverante.
+            </br></br>
+                Poseo conocimientos en programación, análisis de datos y administración de redes (locales y en la nube). Además, aplico metodologías ágiles y principios de desarrollo limpio para lograr el cumplimiento de objetivos de manera eficiente.</br></br> Mi pasión por el anime y los doramas refleja mi creatividad y capacidad para pensar fuera de lo convencional, lo que me permite abordar problemas de manera innovadora y mantener un enfoque equilibrado.
             </p>
         </div>
     </section>
 
-    <!-- Sección Habilidades -->
-    <section id="certifications" class="section dark">
-        <div class="container">
-            <h2>Certificaciones</h2>
-            <ul>
-                <li>
-                    <a href="Programa AluraBackEnd.pdf" target="_blank" onclick="return confirmAction();">BackEnd Java</a>
+        <!-- Sección Habilidades -->
+        <section id="certifications" class="section dark">
+           
+                <nav id="navbar" class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+                    <div class="container-fluid">
+                <h2>Certificaciones</h2>
                 
-                <li><a href="">E-Camp</a></li>
-            </ul>
-        </div>
-    </section>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <a class="navbar-brand"  href="#">Menu</a>  <span class="navbar-toggler-icon"></span>
+                    </button>            
+                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
 
+                <li class="nav-item"> <a class="nav-link" href="Programa AluraBackEnd.pdf" target="_blank" onclick="return confirmAction();"><i class="fab fa-java"></i> <i class="fas fa-database"></i>BackEnd Java</a></li>
+                <li class="nav-item"><a class="nav-link"href="https://sistemas.sence.cl/valcert/Home/Validacion?guid=EBC35E1A-C76F-4B6B-9A7C-556C9E4D20EE"><i class="fas fa-laptop-code"></i> Comercio electronico y Marketing Digital.</a></li>
+                <li class="nav-item"><a class="nav-link"href="https://app.aluracursos.com/certificate/f825f115-0fc6-41fc-9f86-1146457363cd?lang"><i class="fab fa-git-alt"></i><i class="fas fa-code-branch"></i><i class="fa-brands fa-github"></i> Git y GitHub: controle y comparta su código</a></li>    
+                <li class="nav-item"><a class="nav-link"href="https://app.aluracursos.com/certificate/9c6d12da-a42c-4adc-960f-71178c144d70?lang"> <i class="fas fa-database"></i>Administración de MySQL:Seguridad y optimizacion de la base datos</a></li>   
+                <li class="nav-item"><a class="nav-link"href="https://app.aluracursos.com/degree/certificate/75876ce2-ef4d-4d7a-8082-5fcc39162e54?lang"><i class="fab fa-python"></i>Python, Data Science en OCI y Oracle Analytics - ONE</a></li>
+                <li class="nav-item"><a class="nav-link"href="https://app.aluracursos.com/degree/certificate/9da0d4e3-9d15-43c0-9d23-a80d16fae412">Formación Java y Spring Boot</a></li>
+                <li class="nav-item"><a class="nav-link"href="https://app.aluracursos.com/degree/certificate/ef358ab5-0e10-45fc-b769-7407c38d2b0d">Java Orientado a objetos</a></li>
+                <li class="nav-item"><a class="nav-link"href="https://app.aluracursos.com/certificate/a91164ff-82da-4dc4-9b6a-e7010dbe7e59?lang"> <i class="fas fa-database"></i>Administración de MySQL</a></li>
+                <li class="nav-item"><a class="nav-link"href="https://app.aluracursos.com/degree/certificate/e3e2b76f-f605-4adf-8b3d-bacc869f0c52?lang"> Formación Integre aplicaciones Java con Base de datos</a></li>
+                <li class="nav-item"><a class="nav-link"href="https://app.aluracursos.com/degree/certificate/a1065f84-79ca-4dd5-ba11-b2a3b8e118a2?lang"> <i class="fas fa-database"></i>Formación SQL con MySQL Server de Oracle - ONE</a></li>
+                <li class="nav-item"><a class="nav-link"href="https://app.aluracursos.com/certificate/d26862b1-0aa3-4c0c-81cd-9a652c384c1d?lang">Oracle Cloud Infrastructure: base de datos e infraestructura como código</a></li>
+                <li class="nav-item"> <a class="nav-link" href="https://app.aluracursos.com/certificate/d1b56e95-47d5-4c08-ac77-30e8c98cc766?lang"> <i class="fab fa-python"></i>Python Pandas: Tratamiento y análisis de datos</a></li>
+                <li class="nav-item"><a class="nav-link" href="">E-Camp</a></li>    
+            </ul> 
+            
+                <ul class="list-inline dev-icons">
+                    <div class="subheading mb-3">Lenguajes de Programación, librerias y herramientas</div>
+ 
+                    <li class="list-inline-item" data-placement="right" data-html="true"
+                        title="<h4>Python</h4><p><b>Tkinter: </b>Libreria GUI para desarrollo aplicaciones de escritorio.</p><p><b>Django: </b>Framework de desarrollo web.</p><p><b>Flask: </b>Microframework de desarrollo web.</p>">
+                        <i class="fab fa-python"></i>
+                    </li>
+                <!--   <li class="list-inline-item" data-placement="right" data-html="true"
+                        title="<h4>Node.JS</h4><p>Entorno de desarrollo para ejecutar JavaScript en el servidor.</p>"><i
+                            class="fab fa-node-js"></i></li>-->
+                    <li class="list-inline-item" data-placement="right" data-html="true"
+                        title="<h4>Java</h4><p><b>JAVA EE: </b>Estandar para aplicaciones Java portables, rebustas, escalables y seguras en el lado del servidor.</p>">
+                        <i class="fab fa-java"></i>
+                    </li>
+                    <li class="list-inline-item" data-placement="right" data-html="true"
+                        title="<h4>Html</h4><p>Lenguaje de maquetación web.</p>"><i class="fab fa-html5"></i></li>
+                    <li class="list-inline-item" data-placement="right" data-html="true"
+                        title="<h4>Css</h4><p>Lenguaje de estilos para documentos HTML.</p>"><i
+                            class="fab fa-css3-alt"></i></li>
+                    <li class="list-inline-item" data-placement="right" data-html="true"
+                        title="<h4>Javascript</h4><p>Lenguaje de secuancias web para interacciones dinámicas (Vanilla. Lado del cliente).</p>">
+                        <i class="fab fa-js-square"></i>
+                    </li>
+                    <!--<li class="list-inline-item" data-placement="right" data-html="true"
+                        title="<h4>Angular</h4><p>Framework Javascript (usando TypeScript) para desarrollo UI.</p>"><i
+                            class="fab fa-angular"></i></li>-->
+                    <!--<li class="list-inline-item" data-placement="right" data-html="true"
+                        title="<h4>Vue.js</h4><p>Framework de Javascript para desarrollo UI.</p>"><i
+                            class="fab fa-vuejs"></i></li>-->
+                <!-- <li class="list-inline-item" data-placement="right" data-html="true"
+                        title="<h4>React.js</h4><p>Libreria Javascript para desarrollo UI.</p>"><i
+                            class="fab fa-react"></i></li>-->
+                    <li class="list-inline-item" data-placement="right" data-html="true"
+                        title="<h4>Wordpress</h4><p>Sistema de manejo de contenido (CMS).</p>"><i
+                            class="fab fa-wordpress"></i></li>
+                    <li class="list-inline-item" data-placement="right" data-html="true"
+                        title="<h4>Git</h4><p>Controlador de versiones.</p>"><i class="fab fa-git-alt"></i></li>
+                    <li class="list-inline-item" data-placement="right" data-html="true"
+                        title="<h4>Bases de datos</h4><p><b> - MySQL</b><p><b> - PostgreSQL</b></p><p><b> - SQL Server</b></p><p><b> - Oracle</b></p><p></p>"><!--<b> - MongoDB (No SQL)</b>-->
+                        <i class="fas fa-database"></i>
+                    </li>
+                    </ul>       
+                    
+                     
+             </div>
+        </div>
+    </nav>
+</section>
+        
+
+
+    <!-- Skills-->
+   <!-- <section id="certifications" class="section dark">
+        <div class="container">    
+        <h2 class="mb-1">Habilidades</h2>
+            <div class="subheading mb-3">Lenguajes de Programación, librerias y herramientas</div>
+ 
+        </div>
+        </section>-->
+        
     <!-- Sección Experiencia -->
     <section id="experience" class="section">
         <div class="container">
@@ -133,7 +262,7 @@
     </section>
 
     <!-- Sección Contacto -->
-    <section id="contact" class="section">
+    <section id="contacta" class="section">
         <div class="container">
             <h2>Contacto</h2>
             <p>Teléfono: (+569)78662205</p>
@@ -153,7 +282,7 @@
                 </div>
         </div>
     </section>
-
+</main>
     <!-- Pie de página -->
     <footer>
         <p>Luis Daniel Diaz N &copy; 2024</p>
