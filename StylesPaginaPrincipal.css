@@ -13,6 +13,7 @@ body {
     line-height: 1.6; /* Aumenta el espacio entre líneas para mejorar la legibilidad */
     background: url('imagenf.png') repeat
 }
+
 /* Estilo para el botón del menú desplegable */
 .collapsible-button {
     background-color: #3498db;
@@ -245,6 +246,7 @@ footer {
 .light-theme a:hover {
     color: #495057; /* Color del texto al pasar el mouse */
     text-decoration: underline; /* Subrayado al pasar el mouse */
+}
 .light-theme footer {
     background: #ecf0f1;
     color: #2c3e50;
@@ -274,3 +276,8 @@ footer {
         width: 95%; /* Ajusta el ancho del contenedor para que ocupe un poco más del ancho disponible */
     }
 }
+
+
+
+
+
