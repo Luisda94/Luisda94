@@ -100,26 +100,18 @@ header a:hover {
     background: url('imagenf.png') repeat;/*no-repeat center center; /* Usa una imagen de fondo, sin repetición y centrada */
     background-size: auto; /* Escala la imagen de fondo para cubrir toda la sección */
     text-align: center; /* Centra el texto horizontalmente */
-    color: #ecf0f1; /* Color del texto blanco grisáceo */
+    color: #3498db; /* Color del texto blanco grisáceo */
+    
 }
-
-#showcase h1 {
-    margin-top: 100px; /* Añade margen superior para separar el título del borde superior */
-    font-size: 55px; /* Tamaño grande para el título */
-    margin-bottom: 10px; /* Añade un pequeño margen inferior */
-}
-
-#showcase p {
-    font-size: 20px; /* Tamaño de fuente para el párrafo en la sección de presentación */
-}
-
+#showcase h1 {color: #bcd9fa;}
 /* Estilos para las secciones principales */
 .section {
     padding: 20px; /* Añade relleno alrededor del contenido de cada sección */
     margin: 20px 0; /* Añade margen vertical entre secciones */
-    background: #111e2b; /* Color de fondo blanco para las secciones */
-    color: #fefeff; /* Color del texto oscuro para contraste */
+    background: #111e2b; /* Color de fondo */
+    color: #3498db; /* Color del texto */
 }
+
 
 .dark {
     background: rgba(49, 49, 54, 0.836); /* Color de fondo oscuro azul-grisáceo para las secciones con clase .dark */
@@ -130,7 +122,7 @@ header a:hover {
 .section h2 {
     text-align: center; /* Centra el texto de los encabezados de las secciones */
     padding: 10px 0; /* Añade relleno vertical alrededor del encabezado */
-    color: #3498db; /* Color del texto azul claro para los encabezados */
+    color: #bcd9fa; /* Color del texto azul claro para los encabezados */
 }
 
 .section ul {
@@ -180,11 +172,7 @@ footer {
         color: #fefeff; /* Color del texto oscuro para contraste */
     
 }
-.dark-theme #navbar {
-    background-color: #343a40; /* Fondo oscuro */
-    color: #ffffff;          /* Texto blanco */
-    border-color: #444;      /* Borde más oscuro */
-}
+
 .dark-theme a {
     
     color: #ffffff; /* Color del texto blanco */
@@ -199,7 +187,7 @@ footer {
 /* Tema Claro */
 .light-theme {
     background-color: #f4f4f4;
-    background: url('ImgWhite.jpg') repeat;
+    background: url('ImgWhite.png') repeat;
     color: #2c3e50;
 }
 
@@ -216,27 +204,31 @@ footer {
 }
 
 .light-theme #showcase {
-    background: url('ImgWhite.jpg') repeat;
+    background: url('ImgWhite.png') repeat;
     background-size: cover;
     color: black;
 }
+.light-theme #showcase h1 {color: #040405;}
+
 
 .light-theme .section {
     background: #ecf0f1b6;
     color: #2c3e50;
 }
 
+.light-theme .section h2 {color:#040405 }
+
+.light-theme nav ul{
+    background-color: #c8cbda;
+    color: #01182e;
+}
 .light-theme section li {
     background: #ecf0f1; /* Color de fondo blanco para los elementos de la lista */
     color: #2c3e50; /* Color del texto oscuro para contraste */
     margin-bottom: 10px; /* Añade margen inferior entre los elementos de la lista */
     padding: 10px; /* Añade relleno alrededor del contenido de los elementos de la lista */
    }
-   .light-theme #navbar {
-    background-color: #f8f9fa; /* Fondo claro */
-    color: #212529;           /* Texto oscuro */
-    border-color: #e9ecef;    /* Borde más claro */
-}
+
 .light-theme a {
    
     color: #037af1; /* Color del texto oscuro */
