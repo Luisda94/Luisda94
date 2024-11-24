@@ -33,8 +33,12 @@ body {
     display: none; /* Inicialmente oculto */
     overflow: hidden;
     padding: 0 18px;
-    background-color: #f1f1f1;
 }
+
+.navbar-brand {
+    --bs-navbar-brand-color:#3498db;
+    --bs-navbar-brand-hover-color:#d0dde6;
+ }
 
 /* Mostrar el contenido cuando está activo */
 .active + .content {
@@ -114,7 +118,7 @@ header a:hover {
 
 
 .dark {
-    background: rgba(49, 49, 54, 0.836); /* Color de fondo oscuro azul-grisáceo para las secciones con clase .dark */
+    background: rgba(49, 49, 54, 0.836); /* Color de fondo os.dark */
     color: #ecf0f1; /* Color del texto blanco grisáceo */
     padding: 15px 0; /* Relleno vertical de 15px */
 }
@@ -126,6 +130,7 @@ header a:hover {
 }
 
 .section ul {
+    color: #adb5bd;
     margin: 20px 0; /* Añade margen vertical a la lista */
     padding: 0; /* Quita el relleno de la lista */
     list-style: none; /* Quita los puntos de la lista */
@@ -165,19 +170,7 @@ footer {
     background: url('imagenf.png') repeat;
 }
 
-.dark-theme .section {
-        padding: 20px; /* Añade relleno alrededor del contenido de cada sección */
-        margin: 20px 0; /* Añade margen vertical entre secciones */
-        background: #111e2b; /* Color de fondo blanco para las secciones */
-        color: #fefeff; /* Color del texto oscuro para contraste */
-    
-}
 
-.dark-theme a {
-    
-    color: #ffffff; /* Color del texto blanco */
-    text-decoration: none; /* Sin subrayado */
-}
 
 .dark-theme a:hover {
     
@@ -205,7 +198,6 @@ footer {
 
 .light-theme #showcase {
     background: url('ImgWhite.png') repeat;
-    background-size: cover;
     color: black;
 }
 .light-theme #showcase h1 {color: #040405;}
@@ -232,7 +224,7 @@ footer {
 .light-theme a {
    
     color: #037af1; /* Color del texto oscuro */
-    text-decoration: none; /* Sin subrayado */
+    text-decoration: #adb5bd; /* Sin subrayado */
 }
 
 .light-theme a:hover {

@@ -74,3 +74,99 @@ button[type="submit"] {
     width: 30%;
     margin-top: 20px;
 }
+
+
+/* Tema Oscuro */
+.dark-theme {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+}
+
+.dark-theme header {
+    background: #111e2b;
+}
+
+.dark-theme .collapsible-button {
+    background-color: #3498db;
+}
+
+.dark-theme #showcase {
+    background: url('imagenf.png') repeat;
+}
+
+
+
+.dark-theme nav ul{
+    background-color: #c8cbda;
+    color: #01182e;
+}
+.dark-theme section li {
+    background: #ecf0f1; /* Color de fondo blanco para los elementos de la lista */
+    color: #2c3e50; /* Color del texto oscuro para contraste */
+    margin-bottom: 10px; /* Añade margen inferior entre los elementos de la lista */
+    padding: 10px; /* Añade relleno alrededor del contenido de los elementos de la lista */
+   }
+
+.dark-theme a {
+   
+    color: #037af1 !important; /* Color del texto oscuro */
+    text-decoration: none; /* Sin subrayado */
+}
+
+/* Tema Claro */
+.light-theme {
+    background-color: #f4f4f4;
+    background: url('ImgWhite.png') repeat;
+    color: #2c3e50;
+}
+
+.light-theme header {
+    background: #ecf0f1;
+    color: #2c3e50;
+}
+.light-theme header a {
+    color: black;}
+
+.light-theme .collapsible-button {
+    background-color: #3498db;
+    color: white;
+}
+
+.light-theme #showcase {
+    background: url('ImgWhite.png') repeat;
+    color: black;
+}
+.light-theme #showcase h1 {color: #040405;}
+
+
+.light-theme .section {
+    background: #ecf0f1b6;
+    color: #2c3e50;
+}
+
+.light-theme .section h2 {color:#040405 }
+
+.light-theme nav ul{
+    background-color: #c8cbda;
+    color: #01182e;
+}
+.light-theme section li {
+    background: #ecf0f1; /* Color de fondo blanco para los elementos de la lista */
+    color: #2c3e50; /* Color del texto oscuro para contraste */
+    margin-bottom: 10px; /* Añade margen inferior entre los elementos de la lista */
+    padding: 10px; /* Añade relleno alrededor del contenido de los elementos de la lista */
+   }
+
+.light-theme a {
+   
+    color: #037af1; /* Color del texto oscuro */
+    text-decoration: #adb5bd; /* Sin subrayado */
+}
+
+.light-theme a:hover {
+    color: #495057; /* Color del texto al pasar el mouse */
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+.light-theme footer {
+    background: #ecf0f1;
+    color: #2c3e50;
