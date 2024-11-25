@@ -50,16 +50,3 @@ document.getElementById('theme-toggle').addEventListener('click', function() {
         icon.className = 'fas fa-moon'; // Cambiar a icono de luna
     }
 });
-    // Manejo del botón para detener el carrusel
-    const pauseButton = document.getElementById('pauseButton');
-    if (pauseButton) {
-        pauseButton.addEventListener('click', function () {
-            let carousel = bootstrap.Carousel.getInstance(document.getElementById('carouselExampleAutoplaying'));
-            if (!carousel) {
-                carousel = new bootstrap.Carousel(document.getElementById('carouselExampleAutoplaying'));
-            }
-            carousel.pause();
-            alert('Carrusel detenido');
-        });
-    }
-});
