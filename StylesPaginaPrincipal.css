@@ -95,7 +95,7 @@ header .highlight, header .current a {
 }
 
 header a:hover {
-    color: #bdc3c7; /* Color gris claro cuando el mouse pasa sobre el enlace */
+    color: #090a0a; /* Color gris claro cuando el mouse pasa sobre el enlace */
 }
 
 /* Estilos para la sección de presentación */
@@ -158,6 +158,9 @@ footer {
     color: #ecf0f1;
 }
 
+.dark-theme li{
+    color: #3498db;
+}
 .dark-theme header {
     background: #111e2b;
 }
