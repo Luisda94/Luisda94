@@ -1,0 +1,23 @@
+/* Estilos responsivos para pantallas pequeñas */
+@media (max-width: 768px) {
+    header #branding,
+    header nav,
+    header nav li {
+        float: none; /* Quita el flotado de los elementos en pantallas pequeñas */
+        text-align: center; /* Centra el texto en pantallas pequeñas */
+        width: 100%; /* Hace que los elementos ocupen todo el ancho disponible */
+    }
+
+    #showcase h1 {
+        font-size: 40px; /* Reduce el tamaño del título en pantallas pequeñas */
+        margin-top: 50px; /* Ajusta el margen superior del título */
+    }
+
+    #showcase p {
+        font-size: 18px; /* Reduce el tamaño de la fuente del párrafo */
+    }
+
+    .container {
+        width: 95%; /* Ajusta el ancho del contenedor para que ocupe un poco más del ancho disponible */
+    }
+}
