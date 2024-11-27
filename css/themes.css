@@ -17,6 +17,7 @@
 
 .dark-theme #showcase {
     background: url('../imagenf.png') repeat;
+    
 }
 
 
@@ -29,7 +30,7 @@
 /* Tema Claro */
 .light-theme {
     background-color: #f4f4f4;
-    background: url('/ImgWhite.png') repeat;
+    background: url('../ImgWhite.png') repeat;
     color: #2c3e50;
 }
 
@@ -46,7 +47,7 @@
 }
 
 .light-theme #showcase {
-    background: url('/ImgWhite.png') repeat;
+    background: url('../ImgWhite.png') repeat;
     color: black;
 }
 .light-theme #showcase h1 {color: #040405;}
