@@ -10,7 +10,7 @@ body {
     
     font-family: 'Arial', sans-serif; /* Usa Arial como fuente principal; si no está disponible, usa cualquier fuente sans-serif */
     line-height: 1.6; /* Aumenta el espacio entre líneas para mejorar la legibilidad */
-    background: url('imagenf.png') repeat;
+    background: url('../imagenf.png') repeat;
 }
 main {
     padding: 2em;
@@ -27,7 +27,7 @@ main {
 /* Estilos para la sección de presentación */
 #showcase {
     min-height: 400px; /* Altura mínima de 400px para la sección de presentación */
-    background: url('imagenf.png') repeat;/*no-repeat center center; /* Usa una imagen de fondo, sin repetición y centrada */
+    background: url('../imagenf.png') repeat;/*no-repeat center center; /* Usa una imagen de fondo, sin repetición y centrada */
     background-size: auto; /* Escala la imagen de fondo para cubrir toda la sección */
     text-align: center; /* Centra el texto horizontalmente */
     color: #3498db; /* Color del texto blanco grisáceo */
