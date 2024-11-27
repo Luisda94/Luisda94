@@ -11,7 +11,7 @@ body {
     font-family: 'Arial', sans-serif; /* Usa Arial como fuente principal; si no está disponible, usa cualquier fuente sans-serif */
     background-color: #0a0909; /* Color de fondo gris claro para toda la página, neutro y suave */
     line-height: 1.6; /* Aumenta el espacio entre líneas para mejorar la legibilidad */
-    background: url('imagenf.png') repeat
+    background: url('imagenf.png') repeat;
 }
 
 /* Estilo para el botón del menú desplegable */
@@ -112,6 +112,7 @@ header a:hover {
 .section {
     padding: 20px; /* Añade relleno alrededor del contenido de cada sección */
     margin: 20px 0; /* Añade margen vertical entre secciones */
+    margin-bottom: 2em;
     background: #111e2b; /* Color de fondo */
     color: #3498db; /* Color del texto */
 }
