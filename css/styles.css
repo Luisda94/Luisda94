@@ -34,11 +34,11 @@ button[type="submit"] {
  }
 /* Estilos para el encabezado de la página */
 header {
-    background: #111e2b; /* Color de fondo oscuro azul-grisáceo para el encabezado */
+   /* background: #111e2b;  Color de fondo oscuro azul-grisáceo para el encabezado */
     color: #f1ecec; /* Color del texto blanco grisáceo */
     padding: 20px; /* Añade relleno alrededor del contenido del encabezado */
-    min-height: 70px; /* Altura mínima del encabezado */
-    border-bottom: #3498db 3px solid; /* Borde inferior azul claro para separar el encabezado del contenido */
+    min-height: 90px; /* Altura mínima del encabezado */
+    border-bottom: #3498db 1px solid; /* Borde inferior azul claro para separar el encabezado del contenido */
 }
 
 header a {

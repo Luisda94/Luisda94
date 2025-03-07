@@ -23,196 +23,107 @@
 </head>
     
 
-<body >
-    <header >
-      
+<body>
+    <header>
         <h1>Mis Proyectos</h1>
-        
     </header>
-    
-<!-- Navbar de Bootstrap con menú desplegable -->
+
     <nav class="navbar">
-       
         <div class="container-fluid">
-            <!--boton menu-->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <a class="navbar-brand"  href="#">Menu</a>  <span class="navbar-toggler-icon"></span>
-            </button>                
-            <!-- iconos que referencian otras links-->
+                <a class="navbar-brand" href="#">Menu</a> <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="social-icons">
-                <a class="social-icon" target="_ blank"
-                    href="https://www.linkedin.com/in/luis-daniel-diaz-navas-b74039156/?trk=opento_nprofile_details"><i
-                        class="fab fa-linkedin-in"></i></a>
-                <a class="social-icon" target="_ blank" href="https://github.com/Luisda94"><i
-                        class="fab fa-github"></i></a>
-                <a class="social-icon" target="_ blank" href="@LuisDanielDazN3"><i
-                        class="fa-brands fa-x-twitter"></i></a>
-                        <!-- boton cambio de tema con un icono-->
-                        <button id="theme-toggle" class="btn btn-secondary">
-                            <i class="fas fa-moon"></i>
-                          </button>
-                          </div>
-            
+                <a class="social-icon" target="_blank" href="https://www.linkedin.com/in/luis-daniel-diaz-navas-b74039156/?trk=opento_nprofile_details"><i class="fab fa-linkedin-in"></i></a>
+                <a class="social-icon" target="_blank" href="https://github.com/Luisda94"><i class="fab fa-github"></i></a>
+                <a class="social-icon" target="_blank" href="@LuisDanielDazN3"><i class="fa-brands fa-x-twitter"></i></a>
+                <button id="theme-toggle" class="btn btn-secondary"><i class="fas fa-moon"></i></button>
+            </div>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#Barbería_Alura">Práctica de Barbería</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#History of KhanAcademy">History of Web</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#DaVince">Práctica Da Vince</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#Pizarra">Pizarra Web</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#GG">Juego GG</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Barbería_Alura">Práctica de Barbería</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#History of KhanAcademy">History of Web</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#DaVince">Práctica Da Vinci</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Pizarra">Pizarra Web</a></li>
                     <li><a class="nav-link" href="#contacto">Contacto</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    
-        
-            <main id="showcase">
-            
-                <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <section class="mt-4">
-                            <h2 id="Barbería_Alura">Barbería Ficticia Alura</h2>
-                                     <img src="Alura.png" alt="Barbería Ficticia Alura"
-                                         style="width: 80%; max-width: 300px; height: auto;">
-                  
-                              <p>Una web donde aplico mis primeros conocimientos integrados en HTML5, CSS y JavaScript.<br>
-                                 Aquí di mis primeros pasos en responsive design.</p>
-                              <p href="AluraPruebaWeb/index.html" class="btn btn-primary">Ver Proyecto</p>
-                          </section>  
+
+    <main id="showcase">
+        <section class="mt-4">
+            <h2 id="GG">Juego GG</h2>
+            <p>Un juego creado en GDevelop.</p>
+            <a href="https://luisda94.github.io/GG/" class="btn btn-primary">Ver Proyecto</a>
+        </section>
+
+        <section class="mt-4">
+            <h2 id="Barbería_Alura">Barbería Ficticia Alura</h2>
+            <img src="Alura.png" alt="Barbería Ficticia Alura" style="width: 80%; max-width: 300px; height: auto;">
+            <p>Una web donde aplico mis primeros conocimientos integrados en HTML5, CSS y JavaScript.<br>Aquí di mis primeros pasos en responsive design.</p>
+            <a href="AluraPruebaWeb/index.html" class="btn btn-primary">Ver Proyecto</a>
+        </section>
+
+        <section class="mt-4">
+            <h2 id="History of KhanAcademy">History of Web</h2>
+            <img src="HistoryWeb.jpg" alt="Historia de la web" style="width: 80%; max-width: 200px; height: auto;">
+            <p>Página que usé para practicar los enlaces internos y externos de la web en KhanAcademy.</p>
+            <a href="KhanAcademy/Resumen de la historia de la web.html" class="btn btn-primary">Ver Proyecto</a>
+        </section>
+
+        <section class="mt-4">
+            <h2 id="DaVince">Práctica Da Vinci</h2>
+            <img src="DaVince.jpg" alt="Página ultra resumida de Leonardo Da Vinci" style="width: 80%; max-width: 400px; height: auto;">
+            <p>Página práctica de referencias en E-camp.</p>
+            <a href="Seccion_1_evaluacion.html" class="btn btn-primary">Ver Proyecto</a>
+        </section>
+
+        <section class="mt-4">
+            <h2 id="Pizarra">Pizarra</h2>
+            <p>Una página web para dibujar usando la API Canvas de JavaScript.</p>
+            <a href="Pizarra.html" class="btn btn-primary">Ver Proyecto</a>
+        </section>
+
+        <section class="section">
+            <h2 id="contacto">Formulario de Registro</h2>
+            <p>Por favor, complete el siguiente formulario con la información requerida.</p>
+            <form id="form-order">
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre o Nombre de Empresa (obligatorio)</label>
+                    <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Ejemplo: Juan Pérez o Mi Empresa S.A." autocomplete="on" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">¿Es persona natural o jurídica?</label>
+                    <div>
+                        <input type="radio" name="tipo" id="natural" value="natural" required>
+                        <label for="natural">Persona Natural</label>
                     </div>
-                      <div class="carousel-item">
-                        <section class="mt-4">
-                            <h2 id="History of KhanAcademy"> History of Web</h2>
-                            <img src="HistoryWeb.jpg"alt="Historia de la web" 
-                                style="width: 80%; max-width: 200px; height: auto;">
-                            <p>Página que usé para practicar los enlaces internos y externos de la web en KhanAcademy.</p>
-                            <p href="KhanAcademy/Resumen de la historia de la web.html" class="btn btn-primary">Ver Proyecto</p>
-                        </section>
-        </div>
-                      <div class="carousel-item">
-                        <section class="mt-4">
-                            <h2 id="DaVince">Práctica Da Vinci</h2>
-                                    <img src="DaVince.jpg" 
-                                        alt="Página ultra resumida de Leonardo Da Vince" 
-                                        style="width: 80%; 
-                                        max-width: 400px; height: auto;">
-                
-                            <p>Página práctica de referencias en E-camp.</p>
-                            <p href="Seccion_1_evaluacion.html" class="btn btn-primary">Ver Proyecto</p>
-                         </section> </div>
-                         <div class="carousel-item">
-                       <section class="mt-4">
-                    <h2 id="Pizarra">Pizarra</h2>
-                    <p>Una página web para dibujar usando la API Canvas de JavaScript.</p>
-                    <p href="Pizarra.html" class="btn btn-primary">Ver Proyecto</p>
-                      </section>
+                    <div>
+                        <input type="radio" name="tipo" id="juridica" value="juridica" required>
+                        <label for="juridica">Persona Jurídica</label>
                     </div>
+                </div>
+                <div class="mb-3">
+                    <label for="sueldo" class="form-label">Sueldo Ofrecido (obligatorio)</label>
+                    <input type="number" name="sueldo" id="sueldo" class="form-control" placeholder="Ejemplo: 50000" required>
+                </div>
+                <div class="mb-3">
+                    <label for="contacto" class="form-label">Medio de Contacto (obligatorio)</label>
+                    <input type="text" name="contacto" id="contacto" class="form-control" placeholder="Ejemplo: Correo electrónico o Teléfono" required>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </div>
+            </form>
+        </section>
+    </main>
 
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
-            
-            
-            
-            
-    <!--             <section class="mt-4">
-                  <h2 id="Barbería_Alura">Barbería Ficticia Alura</h2>
-                           <img src="Alura.png" alt="Barbería Ficticia Alura"
-                               style="width: 80%; max-width: 300px; height: auto;">
-        
-                    <p>Una web donde aplico mis primeros conocimientos integrados en HTML5, CSS y JavaScript.<br>
-                       Aquí di mis primeros pasos en responsive design.</p>
-                    <a href="AluraPruebaWeb/index.html" class="btn btn-primary">Ver Proyecto</a>
-                </section> -->
-        
-      <!--           <section class="mt-4">
-                    <h2 id="History of KhanAcademy"> History of Web</h2>
-                    <img src="HistoryWeb.jpg"alt="Historia de la web" 
-                        style="width: 80%; max-width: 200px; height: auto;">
-                    <p>Página que usé para practicar los enlaces internos y externos de la web en KhanAcademy.</p>
-                    <a href="KhanAcademy/Resumen de la historia de la web.html" class="btn btn-primary">Ver Proyecto</a>
-                </section> -->
-                
-                 <!-- <section class="mt-4">
-                    <h2 id="DaVince">Práctica Da Vinci</h2>
-                            <img src="DaVince.jpg" 
-                                alt="Página ultra resumida de Leonardo Da Vince" 
-                                style="width: 80%; 
-                                max-width: 400px; height: auto;">
-        
-                    <p>Página práctica de referencias en E-camp.</p>
-                    <a href="Seccion_1_evaluacion.html" class="btn btn-primary">Ver Proyecto</a>
-                 </section> -->
-
-
-                   <!--    <section class="mt-4">
-                    <h2 id="Pizarra">Pizarra</h2>
-                    <p>Una página web para dibujar usando la API Canvas de JavaScript.</p>
-                    <a href="Pizarra.html" class="btn btn-primary">Ver Proyecto</a>
-                      </section>
-                 -->
-                    
-                    <section  class="section">
-
-                        <h2 id="contacto">Formulario de Registro</h2>
-                        <p>Por favor, complete el siguiente formulario con la información requerida.</p>
-                    
-                        <form id="form-order">
-                            <div class="mb-3">
-                                <label for="nombre" class="form-label">Nombre o Nombre de Empresa (obligatorio)</label>
-                                <input type="text" name="nombre" id="nombre" class="form-control"
-                                       placeholder="Ejemplo: Juan Pérez o Mi Empresa S.A."
-                                       autocomplete="on" required>
-                            </div>
-                    
-                            <div class="mb-3">
-                                <label class="form-label">¿Es persona natural o jurídica?</label>
-                                <div>
-                                    <input type="radio" name="tipo" id="natural" value="natural" required>
-                                    <label for="natural">Persona Natural</label>
-                                </div>
-                                <div>
-                                    <input type="radio" name="tipo" id="juridica" value="juridica" required>
-                                    <label for="juridica">Persona Jurídica</label>
-                                </div>
-                            </div>
-                    
-                            <div class="mb-3">
-                                <label for="sueldo" class="form-label">Sueldo Ofrecido (obligatorio)</label>
-                                <input type="number" name="sueldo" id="sueldo" class="form-control"
-                                       placeholder="Ejemplo: 50000" required>
-                            </div>
-                    
-                            <div class="mb-3">
-                                <label for="contacto" class="form-label">Medio de Contacto (obligatorio)</label>
-                                <input type="text" name="contacto" id="contacto" class="form-control"
-                                       placeholder="Ejemplo: Correo electrónico o Teléfono" required>
-                            </div>
-                            <div class="d-flex justify-content-center">
-                                <button type="submit" class="btn btn-primary">Enviar</button>
-                            </div>
-                        </form> 
-                    </section>
-                    </main> 
-                                   <footer >
+    <footer>
         <p>© Mis Proyectos Webs</p>
-        <h3><a href="../index.html" >Luis Diaz</a></h3>
+        <h3><a href="../index.html">Luis Diaz</a></h3>
     </footer>
-    <!-- Bootstrap JS (Para el comportamiento del menú desplegable) -->
-  </body>
+</body>
+
 </html>
