@@ -78,3 +78,64 @@ footer {
     padding: 10px; /* Añade relleno alrededor del contenido del pie de página */
     margin-top: 20px; /* Añade margen superior para separar el pie de página del contenido */
 }
+
+/* Estilo para los items del acordeón */
+.accordion-item {
+    background-color: #26282b;
+    margin-bottom: 10px;
+}
+
+/* Estilo para los botones del acordeón */
+.accordion-button {
+    background-color: #070d13;
+    color: #290808;
+    border: none;
+    font-weight: bold;
+    padding: 10px;
+    text-align: left;
+    width: 100%;
+}
+
+.accordion-button:hover {
+    background-color: #35393d;
+}
+
+/* Estilo para los botones cuando están colapsados */
+.accordion-button:not(.collapsed) {
+    background-color: #0d2d50;
+}
+
+/* Estilo para el cuerpo del acordeón */
+.accordion-body {
+    padding: 15px;
+    background-color: #202020;
+    color: #ffffff;
+    border-top: 1px solid #ddd;
+}
+
+/* Estilo para las imágenes */
+.accordion-body img {
+    background-color: #26282b;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+/* Estilo para los enlaces */
+.accordion-body a.btn {
+    background-color: #26282b;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.accordion-body a.btn:hover {
+    background-color: #718091;
+}
+
+/* Estilo para los títulos del acordeón */
+.accordion-header {
+    margin-bottom: 5px;
+    background-color: #26282b;
+}
