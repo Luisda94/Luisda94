@@ -86,9 +86,10 @@ footer {
 }
 
 /* Estilo para los botones del acordeón */
+
 .accordion-button {
-    background-color: #070d13;
-    color: #290808;
+    background-color: #111e2b !important;
+    color: #ffffff !important;;
     border: none;
     font-weight: bold;
     padding: 10px;
