@@ -14,6 +14,17 @@ document.addEventListener('DOMContentLoaded', function() {
         
     }
 
+// Detectar preferencia del sistema al cargar
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+const userSetTheme = localStorage.getItem('theme');
+
+if (!userSetTheme) {
+    document.body.classList.add(prefersDark ? 'dark-theme' : 'light-theme');
+} else {
+    document.body.classList.add(userSetTheme);
+}
+
+
     // Manejo de botones colapsables
     const collapsibles = document.querySelectorAll('.collapsible-button');
     collapsibles.forEach(button => {
