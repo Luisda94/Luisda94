@@ -3,150 +3,258 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portafolio de Luis Díaz, desarrollador web especializado en Java, Spring Boot y aplicaciones web.">
-    <meta name="author" content="Luis Díaz">
-    <title>Luis Díaz | Desarrollador Web</title>
+    <meta name="description" content="FullStackJunior" />
+    <meta name="author" content="Luis Daniel Diaz Navas"/>
+ 
+    <title>Luis Diaz - FullStackJunior</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+   
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+          
+  <link rel="stylesheet" href="css\StylesPaginaPrincipal.css">
+  <link rel="stylesheet" href="css\themes.css">
+  <link rel="stylesheet" href="css\styles.css">
+  <link rel="stylesheet" href="css\responsive.css">
+    <script src="Script/Script.js" defer></script>
+    <script src="https://use.fontawesome.com/releases/v6.4.2/js/all.js" crossorigin="anonymous"></script><!--pra los iconos-->
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- FontAwesome CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+
 </head>
-
 <body>
-
-    <!-- HEADER / NAV -->
+    <!-- Encabezado de la página -->
     <header>
-        <nav>
-            <h1>Luis Díaz</h1>
-            <ul>
-                <li><a href="#sobre-mi">Sobre mí</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+ 
+        <nav class="navbar">
+            <div class="container-fluid">
+                <!-- Botón de menu -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <a class="navbar-brand"  href="#">Menu</a><span class="navbar-toggler-icon"></span> 
+                </button>
+                
+                <!-- Iconos de redes sociales y botón de cambio de tema -->
+                <div class="social-icons">
+                    <a class="social-icon" target="_blank" href="https://www.linkedin.com/in/luis-daniel-diaz-navas-b74039156/?trk=opento_nprofile_details"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="social-icon" target="_blank" href="https://github.com/Luisda94"><i class="fab fa-github"></i></a>
+                    <a class="social-icon" target="_blank" href="@LuisDanielDazN3"><i class="fa-brands fa-x-twitter"></i></a>
+                    <!-- Botón de cambio de tema -->
+                    <button id="theme-toggle" class="btn btn-secondary">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+        
+                <!-- Menú de navegación -->
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ml-auto" id="colorPrueba"> 
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">Acerca de mí</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#certifications">Certificaciones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#experience">Experiencia</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#education">Educación</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects">Proyectos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav></header>
 
-    <!-- CONTENIDO PRINCIPAL -->
-    <main>
 
-        <!-- SOBRE MI -->
-        <section id="sobre-mi">
-            <h2>Sobre mí</h2>
-            <p>
-                Soy desarrollador web con experiencia en Java, Spring Boot y bases de datos PostgreSQL.
-                Me especializo en la creación de aplicaciones web funcionales, sistemas de inventario
-                y soluciones digitales enfocadas en negocios reales.
-            </p>
-            <p>
-                Actualmente desarrollo proyectos freelance y busco oportunidades remotas donde pueda
-                aportar valor con soluciones eficientes y escalables.
-            </p>
-        </section>
+    
+  
+    <!-- Sección de presentación -->
+     <main>
+    <section id="showcase">
+        <div class="container">
+           
+          <h1>Hola, soy <span class="highlight">Luis Díaz</span></h1>
+          <p>Desarrollador Full Stack apasionado por la tecnología y la innovación.</p> </div>
+    </section>
 
-        <!-- PROYECTOS -->
-        <section id="proyectos">
-            <h2>Proyectos</h2>
+    <!-- Sección Acerca de mí -->
+    <section id="about" class="section">
+        
+        <div class="container">
+            <h2>Acerca de mí</h2>
+            <p>Con experiencia en desarrollo web y administración de redes, disfruto creando soluciones eficientes con <strong>Java, Python, JavaScript y bases de datos</strong>. Me especializo en el diseño y optimización de aplicaciones web, además de tener habilidades en soporte técnico y ciberseguridad.</p>
+          </div>
+    </section>
 
-            <article>
-                <h3>Miss Canela Arts</h3>
-                <p>
-                    Sistema web de inventario y catálogo público desarrollado con Spring Boot y PostgreSQL.
-                    Incluye gestión de productos, categorías y visualización dinámica con Thymeleaf.
-                </p>
-                <a href="#" target="_blank" rel="noopener noreferrer">Ver proyecto</a>
-            </article>
+        <!-- Sección Certificaciones -->
+<section id="certifications" class="section dark">
+    <nav class="navbar">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#certificationsNav" aria-controls="certificationsNav" aria-expanded="false" aria-label="Toggle navigation">
+                <h2 class="mb-0">Certificaciones</h2>
+            </button> 
 
-            <article>
-                <h3>Sistema de Comisiones</h3>
-                <p>
-                    Aplicación web para cálculo de comisiones a camareros usando arquitectura MVC,
-                    Spring Boot, JPA y seguridad con Spring Security.
-                </p>
-                <a href="#" target="_blank" rel="noopener noreferrer">Ver proyecto</a>
-            </article>
-
-            <article>
-                <h3>Juego tipo Match-3</h3>
-                <p>
-                    Videojuego desarrollado en GDevelop basado en mecánicas tipo Match-3 con temática de
-                    nutrientes y suplementos.
-                </p>
-                <a href="#" target="_blank" rel="noopener noreferrer">Ver proyecto</a>
-            </article>
-
-        </section>
-
-        <!-- HABILIDADES -->
-        <section id="habilidades">
-            <h2>Habilidades</h2>
-
-            <article>
-                <h3>Frontend</h3>
-                <ul>
-                    <li>HTML5</li>
-                    <li>CSS3</li>
-                    <li>JavaScript</li>
-                    <li>Bootstrap</li>
+            <div class="collapse navbar-collapse" id="certificationsNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="https://app.aluracursos.com/program/certificate/efebc904-e29b-451a-b4af-50529316df49?lang" target="_blank"><i class="fab fa-java"></i> <i class="fas fa-database"></i> BackEnd Java</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://sistemas.sence.cl/valcert/Home/Validacion?guid=EBC35E1A-C76F-4B6B-9A7C-556C9E4D20EE"><i class="fas fa-laptop-code"></i> Comercio Electrónico y Marketing Digital</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://app.aluracursos.com/certificate/f825f115-0fc6-41fc-9f86-1146457363cd?lang"><i class="fab fa-git-alt"></i> <i class="fas fa-code-branch"></i> <i class="fab fa-github"></i> Git y GitHub</a></li>    
+                    <li class="nav-item"><a class="nav-link" href="https://app.aluracursos.com/certificate/9c6d12da-a42c-4adc-960f-71178c144d70?lang"><i class="fas fa-database"></i> Administración de MySQL</a></li>   
+                    <li class="nav-item"><a class="nav-link" href="https://app.aluracursos.com/degree/certificate/75876ce2-ef4d-4d7a-8082-5fcc39162e54?lang"><i class="fab fa-python"></i> Python, Data Science y Oracle Analytics</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Diploma Luis Díaz full Stack Java E-Camp. .pdf"><i class="fab fa-java"></i> Full Stack Java</a></li>    
+                    <li class="nav-item"><a class="nav-link" href="https://app.aluracursos.com/certificate/1485a604-f4c9-422d-92d8-c6d1f003f1a9?lang">Metodologías Ágiles</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.acreditta.com/credential/739cfc29-1c04-4ae2-9e66-c8f52ed76010?utm_source=copy&resource_type=badge&resource=739cfc29-1c04-4ae2-9e66-c8f52ed76010" target="_blank"><i class="fas fa-certificate"></i> Talento Digital</a></li>
+               
                 </ul>
-            </article>
+            </div>
+        </div>
+    </nav>
 
-            <article>
-                <h3>Backend</h3>
+    <!-- Habilidades y herramientas -->
+    <div class="container mt-4">
+        <div class="subheading mb-3">Lenguajes de Programación, Librerías y Herramientas</div>
+        <ul class="list-inline dev-icons">
+            <li class="list-inline-item" title="Python - Tkinter, Django, Flask"><i class="fab fa-python"></i></li>
+            <li class="list-inline-item" title="Java - Java EE"><i class="fab fa-java"></i></li>
+            <li class="list-inline-item" title="HTML5 - Lenguaje de maquetación"><i class="fab fa-html5"></i></li>
+            <li class="list-inline-item" title="CSS3 - Lenguaje de estilos"><i class="fab fa-css3-alt"></i></li>
+            <li class="list-inline-item" title="JavaScript - Programación dinámica"><i class="fab fa-js-square"></i></li>
+            <li class="list-inline-item" title="WordPress - CMS"><i class="fab fa-wordpress"></i></li>
+            <li class="list-inline-item" title="Git - Control de versiones"><i class="fab fa-git-alt"></i></li>
+            <li class="list-inline-item" title="Bases de datos - MySQL, PostgreSQL, SQL Server, Oracle"><i class="fas fa-database"></i></li>
+            <li class="list-inline-item" title="Eclipse - IDE"><i class="devicon-eclipse-plain"></i></li>
+            <li class="list-inline-item" title="Visual Studio Code - IDE"><i class="devicon-vscode-plain-wordmark"></i></li>
+        </ul>
+    </div>
+</section>
+
+<section id="experience" class="section container">
+    <h2>Experiencia</h2>
+    <ul>
+        <li><strong>Desarrollador de videojuegos en GDevelop</strong> (2024 - Actualidad)</li>
+        <li><strong>Desarrollador Java Full Stack</strong> - Proyecto Académico en Alura Latam</li>
+        <li><strong>Técnico en Óptica y Ventas</strong> - Ópticas Lourdes</li>
+    </ul>
+</section>
+
+<section id="projects" class="section dark">
+    <nav class="navbar">
+        <div class="container-fluid"> <!-- Inicio del div con la clase "container-fluid" -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#projectsNav" aria-controls="projectsNav" aria-expanded="false" aria-label="Toggle navigation">
+                <h2 class="mb-0">Proyectos</h2>
+            </button>
+
+            <div class="collapse navbar-collapse" id="projectsNav"> <!-- Inicio del div con la clase "collapse navbar-collapse" -->
+                <div class="accordion" id="projectsAccordion"> <!-- Inicio del div con la clase "accordion" -->
+                    <div class="accordion-item"> <!-- Inicio de un item del accordion -->
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#projectOne">
+                                Juego GG
+                            </button>
+                        </h2>
+                        <div id="projectOne" class="accordion-collapse collapse show" data-bs-parent="#projectsAccordion"> <!-- Inicio del div del proyecto GG -->
+                            <div class="accordion-body"> <!-- Inicio del cuerpo del proyecto GG -->
+                                <img src="img/GlovitoSurvivor.png" alt="Juergo GG" class="img-fluid">
+                                <p>Un juego creado en GDevelop.</p>
+                                <a href="https://luisda94.github.io/GG/" class="btn btn-primary">Ver Proyecto</a>
+                            </div> <!-- Fin del cuerpo del proyecto GG -->
+                        </div> <!-- Fin del div del proyecto GG -->
+                    </div> <!-- Fin del accordion-item para el proyecto GG -->
+
+                    <div class="accordion-item"> <!-- Inicio de un item del accordion para el proyecto "Barbería Ficticia Alura" -->
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#projectTwo">
+                                Barbería Ficticia Alura
+                            </button>
+                        </h2>
+                        <div id="projectTwo" class="accordion-collapse collapse" data-bs-parent="#projectsAccordion"> <!-- Inicio del div para el proyecto "Barbería Ficticia Alura" -->
+                            <div class="accordion-body"> <!-- Inicio del cuerpo del proyecto "Barbería Ficticia Alura" -->
+                                <img src="img/Alura.png" alt="Barbería Ficticia Alura" class="img-fluid">
+                                <p>Una web donde aplico mis primeros conocimientos en HTML5, CSS y JavaScript.</p>
+                                <a href="AluraPruebaWeb/index.html" class="btn btn-primary">Ver Proyecto</a>
+                            </div> <!-- Fin del cuerpo del proyecto "Barbería Ficticia Alura" -->
+                        </div> <!-- Fin del div para el proyecto "Barbería Ficticia Alura" -->
+                    </div> <!-- Fin del accordion-item para el proyecto "Barbería Ficticia Alura" -->
+
+                    <div class="accordion-item"> <!-- Inicio de un item del accordion para el proyecto "History of Web" -->
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#projectThree">
+                                History of Web
+                            </button>
+                        </h2>
+                        <div id="projectThree" class="accordion-collapse collapse" data-bs-parent="#projectsAccordion"> <!-- Inicio del div para el proyecto "History of Web" -->
+                            <div class="accordion-body"> <!-- Inicio del cuerpo del proyecto "History of Web" -->
+                                <img src="img/HistoryWeb.jpg" alt="Historia de la web" class="img-fluid">
+                                <p>Página que usé para practicar enlaces internos y externos en KhanAcademy.</p>
+                                <a href="KhanAcademy/Resumen de la historia de la web.html" class="btn btn-primary">Ver Proyecto</a>
+                            </div> 
+                        </div> 
+                    </div> 
+                </div> 
+            </div> 
+        </div> 
+    </nav>
+</section> <!-- Fin de la sección "projects" -->
+
+
+    <!-- Sección Educación -->
+    <section id="education" class="section dark">
+        <div class="container">
+            <h2>Educación</h2>
+            
                 <ul>
-                    <li>Java</li>
-                    <li>Spring Boot</li>
-                    <li>Spring Security</li>
-                    <li>JPA / Hibernate</li>
+                    <li><strong>Certificación ONE</strong> - Alura Latam</li>
+                    <li><strong>Bachiller en Ciencias</strong> - U.E.P. José María Carreño</li> 
+                
+                <li><strong>Licenciatura en Historia</strong>
+                    Universidad Central de Venezuela</li>
                 </ul>
-            </article>
+        </div>
+    </section>
 
-            <article>
-                <h3>Base de Datos</h3>
-                <ul>
-                    <li>PostgreSQL</li>
-                    <li>MySQL</li>
-                </ul>
-            </article>
-
-            <article>
-                <h3>Herramientas</h3>
-                <ul>
-                    <li>Git & GitHub</li>
-                    <li>Linux</li>
-                    <li>Postman</li>
-                </ul>
-            </article>
-
-        </section>
-
-        <!-- CONTACTO -->
-        <section id="contacto">
+    <!-- Sección Contacto -->
+    <section id="contacta" class="section">
+        <div class="container">
+            
             <h2>Contacto</h2>
-            <p>¿Te interesa trabajar conmigo? Contáctame:</p>
-
-            <ul>
-                <li>
-                    GitHub: 
-                    <a href="https://github.com/Luisda94" target="_blank" rel="noopener noreferrer">
-                        github.com/Luisda94
-                    </a>
-                </li>
-                <li>
-                    Email: 
-                    <a href="mailto:tuemail@gmail.com">tuemail@gmail.com</a>
-                </li>
-                <li>
-                    WhatsApp: 
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                        Enviar mensaje
-                    </a>
-                </li>
-            </ul>
-        </section>
-
-    </main>
-
-    <!-- FOOTER -->
+            <p>¿Quieres trabajar juntos? Envíame un mensaje:</p>
+        <ul>
+            <li>Email: <a href="mailto:Luisda915@gmail.com">Luisda915@gmail.com</a></li>
+            <li>GitHub: <a href="https://github.com/Luisda94" target="_blank">github.com/Luisda94</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/luis-daniel-diaz-navas-b74039156/?trk=opento_nprofile_details">linkedin.com/in/lddiaznavas</a></li>
+            <li>Teléfono: <a href="tel:+56978662205">(+56) 978662205</a></li>
+  
+        </ul>
+            </div>
+    </section>
+</main>
+    <!-- Pie de página -->
     <footer>
-        <p>&copy; 2026 Luis Díaz - Todos los derechos reservados</p>
+            <div class="social-icons">
+                <a class="social-icon" target="_ blank"
+                    href="https://www.linkedin.com/in/luis-daniel-diaz-navas-b74039156/?trk=opento_nprofile_details"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a class="social-icon" target="_ blank" href="https://github.com/Luisda94"><i
+                        class="fab fa-github"></i></a>
+                <a class="social-icon" target="_ blank" href="@LuisDanielDazN3"><i
+                        class="fa-brands fa-x-twitter"></i></a>
+    <p>Luis Daniel Diaz N &copy; 2024</p>
     </footer>
-
+    
 </body>
+
 </html>
