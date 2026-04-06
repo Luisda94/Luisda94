@@ -1,0 +1,300 @@
+/* =========================
+   RESET
+========================= */
+body,h1,h2,h3,p,ul{
+margin:0;
+padding:0;
+list-style:none;
+}
+
+/* =========================
+   BASE
+========================= */
+body{
+background:url('../imagenf.png') repeat;
+font-family:Arial,sans-serif;
+line-height:1.6;
+}
+
+main{
+padding:2em;
+padding-bottom:100px;
+}
+
+.container{
+width:80%;
+margin:auto;
+overflow:hidden;
+}
+
+/* =========================
+   HEADER / NAV
+========================= */
+header{
+color:#f1ecec;
+padding:20px;
+min-height:90px;
+border-bottom:#3498db 1px solid;
+}
+
+header a{
+color:#ecf0f1;
+text-decoration:none;
+text-transform:uppercase;
+font-size:16px;
+}
+
+nav ul{
+background:#34495e93;
+text-align:center;
+}
+
+nav ul li{
+display:inline;
+}
+
+nav ul li a{
+color:#037af1!important;
+padding:1em;
+display:inline-block;
+}
+
+nav ul li a:hover{
+background:#2c3e50;
+}
+
+.navbar-brand{
+--bs-navbar-brand-color:#3498db;
+--bs-navbar-brand-hover-color:#d0dde6;
+}
+
+/* =========================
+   SHOWCASE
+========================= */
+#showcase{
+min-height:200px;
+background:url('../imagenf.png') repeat;
+text-align:center;
+color:#3498db;
+}
+
+#showcase h1{
+color:#bcd9fa;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+.section{
+padding:20px;
+margin:20px 0;
+background:#111e2b;
+color:#3498db;
+}
+
+.section h2{
+text-align:center;
+padding:10px 0;
+color:#bcd9fa;
+}
+
+.section ul{
+color:#adb5bd;
+margin:20px 0;
+}
+
+.section li{
+background:#111e2b;
+color:#3498db;
+margin-bottom:10px;
+padding:10px;
+}
+
+.dark{
+background:rgba(49,49,54,.836);
+color:#ecf0f1;
+padding:15px 0;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer{
+background:#111e2b;
+color:#ecf0f1;
+text-align:center;
+padding:10px;
+margin-top:20px;
+}
+
+/* =========================
+   ACCORDION
+========================= */
+.accordion-item{
+background:#26282b;
+margin-bottom:10px;
+}
+
+.accordion-button{
+background:#111e2b!important;
+color:#fff!important;
+border:none;
+font-weight:bold;
+padding:10px;
+width:100%;
+}
+
+.accordion-button:hover{
+background:#35393d;
+}
+
+.accordion-button:not(.collapsed){
+background:#0d2d50;
+}
+
+.accordion-body{
+padding:15px;
+background:#202020;
+color:#fff;
+border-top:1px solid #ddd;
+}
+
+.accordion-body img{
+background:#26282b;
+max-width:100%;
+margin-bottom:15px;
+}
+
+.accordion-body a.btn{
+background:#26282b;
+color:#fff;
+border-radius:5px;
+padding:10px 20px;
+}
+
+.accordion-body a.btn:hover{
+background:#718091;
+}
+
+/* =========================
+   BOTONES
+========================= */
+button[type="submit"]{
+width:30%;
+margin-top:20px;
+}
+
+/* =========================
+   COLLAPSIBLE
+========================= */
+.collapsible-button{
+background:#3498db;
+color:#fff;
+cursor:pointer;
+padding:10px;
+width:100%;
+border:none;
+font-size:18px;
+margin:5px 0;
+}
+
+.content{
+display:none;
+padding:0 18px;
+}
+
+.active + .content{
+display:block;
+}
+
+/* =========================
+   THEMES
+========================= */
+
+/* DARK */
+.dark-theme header{
+background:#111e2b;
+}
+
+.dark-theme #showcase{
+background:url('../imagenf.png') repeat;
+}
+
+.dark-theme li{
+color:#3498db;
+}
+
+/* LIGHT */
+.light-theme{
+background:url("../ImgWhite.png") repeat;
+color:#2c3e50;
+}
+
+.light-theme header{
+background:url("../ImgWhite.png") repeat;
+color:#2c3e50;
+}
+
+.light-theme header a{
+color:black;
+}
+
+.light-theme #showcase{
+background:url("../ImgWhite.png") repeat;
+color:black;
+}
+
+.light-theme #showcase h1{
+color:#040405;
+}
+
+.light-theme .section{
+background:#ecf0f1b6;
+color:#2c3e50;
+}
+
+.light-theme .section h2{
+color:#040405;
+}
+
+.light-theme nav ul{
+background:#c8cbdaa6;
+}
+
+.light-theme li{
+background:#ecf0f1;
+color:#2c3e50;
+}
+
+.light-theme a{
+color:#037af1;
+}
+
+.light-theme a:hover{
+color:#495057;
+text-decoration:underline;
+}
+
+.light-theme footer{
+background:#ecf0f1;
+color:#2c3e50;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width:768px){
+
+#showcase h1{
+font-size:40px;
+margin-top:50px;
+}
+
+#showcase p{
+font-size:18px;
+}
+
+.container{
+width:95%;
+}
+}
