@@ -68,36 +68,6 @@ background:#2c3e50;
 --bs-navbar-brand-hover-color:#d0dde6;
 }
 
-/* =========================
-   FIX NAVBAR (COLORES)
-========================= */
-
-/* Texto del botón menú */
-.navbar-toggler{
-color:#ecf0f1 !important; /* blanco suave */
-border-color:#3498db; /* azul */
-}
-
-/* Texto "Menu" */
-.navbar-toggler span,
-.navbar-toggler{
-color:#ecf0f1 !important; /* blanco */
-}
-
-/* Icono hamburguesa */
-.navbar-toggler-icon{
-filter: invert(1); /* blanco */
-}
-
-/* Links del menú */
-.navbar-nav .nav-link{
-color:#3498db !important; /* azul claro */
-}
-
-/* Hover */
-.navbar-nav .nav-link:hover{
-color:#bcd9fa !important; /* azul más claro */
-}
 
 
 /* =========================
@@ -254,31 +224,7 @@ background:url('../imagenf.png') repeat;
 
 .dark-theme li{
 color:#3498db;
-}/* DARK THEME NAV */
-.dark-theme .navbar-toggler{
-color:#ecf0f1 !important; /* blanco */
-border-color:#3498db; /* azul */
-}
 
-.dark-theme .navbar-nav .nav-link{
-color:#3498db !important; /* azul */
-}
-
-.dark-theme .navbar-nav .nav-link:hover{
-color:#bcd9fa !important; /* celeste */
-}
-/* LIGHT THEME NAV */
-.light-theme .navbar-toggler{
-color:#2c3e50 !important; /* gris oscuro */
-border-color:#2c3e50;
-}
-
-.light-theme .navbar-nav .nav-link{
-color:#037af1 !important; /* azul */
-}
-
-.light-theme .navbar-nav .nav-link:hover{
-color:#495057 !important; /* gris */
 }
 /* LIGHT */
 .light-theme{
