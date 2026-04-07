@@ -267,7 +267,19 @@ color:#3498db !important; /* azul */
 .dark-theme .navbar-nav .nav-link:hover{
 color:#bcd9fa !important; /* celeste */
 }
+/* LIGHT THEME NAV */
+.light-theme .navbar-toggler{
+color:#2c3e50 !important; /* gris oscuro */
+border-color:#2c3e50;
+}
 
+.light-theme .navbar-nav .nav-link{
+color:#037af1 !important; /* azul */
+}
+
+.light-theme .navbar-nav .nav-link:hover{
+color:#495057 !important; /* gris */
+}
 /* LIGHT */
 .light-theme{
 background:url("../ImgWhite.png") repeat;
