@@ -254,6 +254,18 @@ background:url('../imagenf.png') repeat;
 
 .dark-theme li{
 color:#3498db;
+}/* DARK THEME NAV */
+.dark-theme .navbar-toggler{
+color:#ecf0f1 !important; /* blanco */
+border-color:#3498db; /* azul */
+}
+
+.dark-theme .navbar-nav .nav-link{
+color:#3498db !important; /* azul */
+}
+
+.dark-theme .navbar-nav .nav-link:hover{
+color:#bcd9fa !important; /* celeste */
 }
 
 /* LIGHT */
