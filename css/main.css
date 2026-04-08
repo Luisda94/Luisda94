@@ -226,6 +226,20 @@ background:url('../imagenf.png') repeat;
 color:#3498db;
 
 }
+/* =========================
+   add. THEME fof .navbar
+========================= */
+.dark-theme .navbar{
+backdrop-filter: blur(10px);
+background: rgba(17,30,43,0.8); /* azul oscuro translúcido */
+}
+
+.light-theme .navbar{
+backdrop-filter: blur(10px);
+background: rgba(255,255,255,0.8); /* blanco translúcido */
+}
+
+
 /* LIGHT */
 .light-theme{
 background:url("../ImgWhite.png") repeat;
