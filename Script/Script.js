@@ -1,63 +1,86 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Manejo del enlace de descarga
+
+    // =========================
+    // NAVBAR DINÁMICO SEGÚN TEMA
+    // =========================
+    const navbar = document.querySelector(".navbar");
+
+    function actualizarNavbar() {
+        if (document.body.classList.contains("dark-theme")) {
+            navbar.classList.remove("navbar-light");
+            navbar.classList.add("navbar-dark");
+        } else {
+            navbar.classList.remove("navbar-dark");
+            navbar.classList.add("navbar-light");
+        }
+    }
+
+    // =========================
+    // TEMA INICIAL
+    // =========================
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const userSetTheme = localStorage.getItem('theme');
+
+    if (!userSetTheme) {
+        document.body.classList.add(prefersDark ? 'dark-theme' : 'light-theme');
+    } else {
+        document.body.classList.add(userSetTheme);
+    }
+
+    actualizarNavbar(); // 🔥 IMPORTANTE
+
+    // =========================
+    // BOTÓN CAMBIO DE TEMA
+    // =========================
+    const themeBtn = document.getElementById('theme-toggle');
+
+    themeBtn.addEventListener('click', function() {
+        const body = document.body;
+
+        body.classList.toggle('dark-theme');
+        body.classList.toggle('light-theme');
+
+        // Guardar preferencia
+        const currentTheme = body.classList.contains('dark-theme') ? 'dark-theme' : 'light-theme';
+        localStorage.setItem('theme', currentTheme);
+
+        // Cambiar icono
+        let icon = this.querySelector('i');
+        if (!icon) {
+            icon = document.createElement('i');
+            this.textContent = '';
+            this.appendChild(icon);
+        }
+
+        icon.className = body.classList.contains('dark-theme')
+            ? 'fas fa-sun'
+            : 'fas fa-moon';
+
+        actualizarNavbar(); // 🔥 CLAVE
+    });
+
+    // =========================
+    // DESCARGA PDF
+    // =========================
     const downloadLink = document.getElementById('downloadLink');
     if (downloadLink) {
         downloadLink.addEventListener('click', function(event) {
-            const userChoice = confirm("El archivo PDF se abrirá en una nueva pestaña. ¿Desea continuar?");
-            if (!userChoice) {
+            if (!confirm("El archivo PDF se abrirá en una nueva pestaña. ¿Desea continuar?")) {
                 event.preventDefault();
             }
         });
-        function confirmAction() {
-            return confirm("El archivo PDF se abrirá en una nueva pestaña. ¿Desea continuar?");
-        }
-        
     }
 
-// Detectar preferencia del sistema al cargar
-const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-const userSetTheme = localStorage.getItem('theme');
-
-if (!userSetTheme) {
-    document.body.classList.add(prefersDark ? 'dark-theme' : 'light-theme');
-} else {
-    document.body.classList.add(userSetTheme);
-}
-
-
-    // Manejo de botones colapsables
+    // =========================
+    // COLLAPSIBLES
+    // =========================
     const collapsibles = document.querySelectorAll('.collapsible-button');
     collapsibles.forEach(button => {
         button.addEventListener('click', function() {
             this.classList.toggle('active');
             const content = this.nextElementSibling;
-            if (content.style.display === "block") {
-                content.style.display = "none";
-            } else {
-                content.style.display = "block";
-            }
+            content.style.display = (content.style.display === "block") ? "none" : "block";
         });
     });
-});
-document.getElementById('theme-toggle').addEventListener('click', function() {
-    const body = document.body;
-    body.classList.toggle('dark-theme');
-    body.classList.toggle('light-theme');
 
-    // Seleccionar el elemento <i> dentro del botón
-    let icon = this.querySelector('i');
-
-    // Si no existe, crearlo
-    if (!icon) {
-        icon = document.createElement('i');
-        this.textContent = ''; // Limpiar cualquier texto
-        this.appendChild(icon);
-    }
-
-    // Cambiar el ícono según el tema activo
-    if (body.classList.contains('dark-theme')) {
-        icon.className = 'fas fa-sun'; // Cambiar a icono de sol
-    } else {
-        icon.className = 'fas fa-moon'; // Cambiar a icono de luna
-    }
 });
