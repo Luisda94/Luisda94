@@ -239,7 +239,10 @@ backdrop-filter: blur(10px);
 background: rgba(255,255,255,0.8); /* blanco translúcido */
 }
 
-
+.navbar{
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px); /* Safari */
+}
 /* LIGHT */
 .light-theme{
 background:url("../ImgWhite.png") repeat;
