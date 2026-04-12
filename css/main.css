@@ -411,6 +411,48 @@ background:#ecf0f1;
 color:#2c3e50;
 }
 
+/* ── CAMBIO 12/04/2026 ──────────────────────────────────────────
+   La sección Proyectos usaba colores oscuros hardcodeados en
+   .accordion-item, .accordion-button y .accordion-body.
+   En light-theme estos no cambiaban porque no existían reglas
+   específicas para sobreescribirlos (algunos tenían !important).
+   Se agregan reglas con suficiente especificidad para forzar
+   los colores claros correctos en modo light.
+────────────────────────────────────────────────────────────────── */
+.light-theme .accordion-item{
+background:#f0f4f8;
+border:1px solid #cdd5e0;
+}
+
+.light-theme .accordion-button{
+background:#dce6f0 !important;
+color:#2c3e50 !important;
+}
+
+.light-theme .accordion-button:hover{
+background:#c8d8ea !important;
+}
+
+.light-theme .accordion-button:not(.collapsed){
+background:#b8cfe8 !important;
+color:#1a2d40 !important;
+}
+
+.light-theme .accordion-body{
+background:#eaf1f8;
+color:#2c3e50;
+border-top:1px solid #b0c4d8;
+}
+
+.light-theme .accordion-body a.btn{
+background:#2c3e50;
+color:#fff;
+}
+
+.light-theme .accordion-body a.btn:hover{
+background:#3d5a73;
+
+
 /* =========================
    RESPONSIVE
 ========================= */
