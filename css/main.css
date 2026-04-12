@@ -53,8 +53,14 @@ nav ul li{
 display:inline;
 }
 
+/* ── CAMBIO 12/04/2026 ──────────────────────────────────────────
+   Se eliminó "!important" del color de los links del nav.
+   El !important impedía que las reglas de .light-theme y .dark-theme
+   pudieran sobreescribir el color al cambiar de modo.
+   Solución: color sin !important + regla específica por tema más abajo.
+────────────────────────────────────────────────────────────────── */
 nav ul li a{
-color:#037af1!important;
+color:#037af1;
 padding:1em;
 display:inline-block;
 }
@@ -224,25 +230,72 @@ background:url('../imagenf.png') repeat;
 
 .dark-theme li{
 color:#3498db;
-
 }
+
 /* =========================
-   add. THEME fof .navbar
+   add. THEME for .navbar
 ========================= */
 .dark-theme .navbar{
 backdrop-filter: blur(10px);
-background: rgba(17,30,43,0.8); /* azul oscuro translúcido */
+background: rgba(17,30,43,0.8);
 }
 
 .light-theme .navbar{
 backdrop-filter: blur(10px);
-background: rgba(255,255,255,0.8); /* blanco translúcido */
+background: rgba(255,255,255,0.8);
 }
 
 .navbar{
 backdrop-filter: blur(10px);
--webkit-backdrop-filter: blur(10px); /* Safari */
+-webkit-backdrop-filter: blur(10px);
 }
+
+/* ── CAMBIO 12/04/2026 ──────────────────────────────────────────
+   Bootstrap agrega .navbar-light al cambiar de tema (via JS),
+   y sus variables CSS pisaban los colores de los links del menú.
+   Se agrega especificidad extra para forzar el color correcto
+   en modo claro tanto en desktop como en el menú colapsado mobile.
+────────────────────────────────────────────────────────────────── */
+.light-theme .navbar.navbar-light .nav-link{
+color:#2c3e50 !important;
+}
+
+.light-theme .navbar-collapse .nav-link{
+color:#2c3e50;
+}
+
+.light-theme .navbar-collapse .nav-link:hover{
+color:#3498db;
+}
+
+/* ── CAMBIO 12/04/2026 ──────────────────────────────────────────
+   El ícono del toggler (☰) en Bootstrap usa un SVG con color fijo.
+   En modo claro el fondo del navbar se vuelve blanco/translúcido,
+   por lo que el ícono oscuro de Bootstrap desaparecía visualmente.
+   filter:invert(1) lo convierte al color opuesto para que contraste.
+────────────────────────────────────────────────────────────────── */
+.light-theme .navbar.navbar-light .navbar-toggler-icon{
+filter: invert(1);
+}
+
+/* ── CAMBIO 12/04/2026 ──────────────────────────────────────────
+   El botón de cambio de tema (#theme-toggle) heredaba estilos de
+   Bootstrap .btn-secondary de forma inconsistente entre modos.
+   Se definen colores explícitos para cada tema para evitar que
+   quede invisible o con bajo contraste al cambiar de modo.
+────────────────────────────────────────────────────────────────── */
+.dark-theme #theme-toggle{
+background:#3498db;
+border-color:#3498db;
+color:#fff;
+}
+
+.light-theme #theme-toggle{
+background:#2c3e50;
+border-color:#2c3e50;
+color:#fff;
+}
+
 /* LIGHT */
 .light-theme{
 background:url("../ImgWhite.png") repeat;
@@ -278,6 +331,17 @@ color:#040405;
 
 .light-theme nav ul{
 background:#c8cbdaa6;
+}
+
+/* ── CAMBIO 12/04/2026 ──────────────────────────────────────────
+   Se agrega color explícito a los links del nav en modo light.
+   Antes no existía esta regla y el color quedaba como #037af1
+   (azul brillante) incluso en fondo blanco, lo que era correcto
+   visualmente pero inconsistente con el resto del tema claro.
+   Se mantiene azul pero en tono más suave compatible con el tema.
+────────────────────────────────────────────────────────────────── */
+.light-theme nav ul li a{
+color:#2c3e50;
 }
 
 .light-theme li{
