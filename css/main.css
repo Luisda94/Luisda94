@@ -1,4 +1,22 @@
-/* =========================
+Creación de página
+/
+
+Buenas noches, te compartire un link : https://luisda94.github.io/Luisda94/#experience esa es mi web. Y este el repositorio : https://github.com/Luisda94/Luisda94 allí comparto mi experiencia y proceso en el mundo de la programación. Está semana estuve viendo algunos detalles y corrigiendo. Aún estoy en eso en la parte de la arquitectura css y diseño viendo algunas incongruencias en la barra de menu cuando cambia de modo. ¿Me ayudas con eso ? Por favor gracias.
+11 abr
+Se buscó en la web
+
+Pude ver tu index.html completo. Para poder revisar los problemas de la barra de menú al cambiar de modo (dark/light), necesito también ver tu CSS y tu JavaScript.
+
+¿Puedes compartirme directamente el contenido de estos archivos? Las opciones son:
+
+    Pegar el contenido de css/main.css y Script/Script.js aquí en el chat.
+    Compartir el link raw de GitHub de esos archivos, por ejemplo:
+    https://raw.githubusercontent.com/Luisda94/Luisda94/main/css/main.css
+    (así lo puedo leer directamente).
+
+Con eso podré identificar exactamente qué está fallando en la navbar cuando cambia entre modos. 👍
+
+Primero css /* =========================
    RESET
 ========================= */
 body,h1,h2,h3,p,ul{
@@ -34,7 +52,8 @@ header{
 color:#f1ecec;
 padding:20px;
 min-height:90px;
-border-bottom:#3498db 1px solid;
+border-bottom:
+#3498db 1px solid;
 }
 
 header a{
@@ -53,14 +72,8 @@ nav ul li{
 display:inline;
 }
 
-/* ── CAMBIO 12/04/2026 ──────────────────────────────────────────
-   Se eliminó "!important" del color de los links del nav.
-   El !important impedía que las reglas de .light-theme y .dark-theme
-   pudieran sobreescribir el color al cambiar de modo.
-   Solución: color sin !important + regla específica por tema más abajo.
-────────────────────────────────────────────────────────────────── */
 nav ul li a{
-color:#037af1;
+color:#037af1!important;
 padding:1em;
 display:inline-block;
 }
@@ -71,10 +84,9 @@ background:#2c3e50;
 
 .navbar-brand{
 --bs-navbar-brand-color:#3498db;
---bs-navbar-brand-hover-color:#d0dde6;
+--bs-navbar-brand-hover-color:
+#d0dde6;
 }
-
-
 
 /* =========================
    SHOWCASE
@@ -97,7 +109,8 @@ color:#bcd9fa;
 padding:20px;
 margin:20px 0;
 background:#111e2b;
-color:#3498db;
+color:
+#3498db;
 }
 
 .section h2{
@@ -113,7 +126,8 @@ margin:20px 0;
 
 .section li{
 background:#111e2b;
-color:#3498db;
+color:
+#3498db;
 margin-bottom:10px;
 padding:10px;
 }
@@ -129,7 +143,8 @@ padding:15px 0;
 ========================= */
 footer{
 background:#111e2b;
-color:#ecf0f1;
+color:
+#ecf0f1;
 text-align:center;
 padding:10px;
 margin-top:20px;
@@ -230,72 +245,25 @@ background:url('../imagenf.png') repeat;
 
 .dark-theme li{
 color:#3498db;
-}
 
+}
 /* =========================
-   add. THEME for .navbar
+   add. THEME fof .navbar
 ========================= */
 .dark-theme .navbar{
 backdrop-filter: blur(10px);
-background: rgba(17,30,43,0.8);
+background: rgba(17,30,43,0.8); /* azul oscuro translúcido */
 }
 
 .light-theme .navbar{
 backdrop-filter: blur(10px);
-background: rgba(255,255,255,0.8);
+background: rgba(255,255,255,0.8); /* blanco translúcido */
 }
 
 .navbar{
 backdrop-filter: blur(10px);
--webkit-backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px); /* Safari */
 }
-
-/* ── CAMBIO 12/04/2026 ──────────────────────────────────────────
-   Bootstrap agrega .navbar-light al cambiar de tema (via JS),
-   y sus variables CSS pisaban los colores de los links del menú.
-   Se agrega especificidad extra para forzar el color correcto
-   en modo claro tanto en desktop como en el menú colapsado mobile.
-────────────────────────────────────────────────────────────────── */
-.light-theme .navbar.navbar-light .nav-link{
-color:#2c3e50 !important;
-}
-
-.light-theme .navbar-collapse .nav-link{
-color:#2c3e50;
-}
-
-.light-theme .navbar-collapse .nav-link:hover{
-color:#3498db;
-}
-
-/* ── CAMBIO 12/04/2026 ──────────────────────────────────────────
-   El ícono del toggler (☰) en Bootstrap usa un SVG con color fijo.
-   En modo claro el fondo del navbar se vuelve blanco/translúcido,
-   por lo que el ícono oscuro de Bootstrap desaparecía visualmente.
-   filter:invert(1) lo convierte al color opuesto para que contraste.
-────────────────────────────────────────────────────────────────── */
-.light-theme .navbar.navbar-light .navbar-toggler-icon{
-filter: invert(1);
-}
-
-/* ── CAMBIO 12/04/2026 ──────────────────────────────────────────
-   El botón de cambio de tema (#theme-toggle) heredaba estilos de
-   Bootstrap .btn-secondary de forma inconsistente entre modos.
-   Se definen colores explícitos para cada tema para evitar que
-   quede invisible o con bajo contraste al cambiar de modo.
-────────────────────────────────────────────────────────────────── */
-.dark-theme #theme-toggle{
-background:#3498db;
-border-color:#3498db;
-color:#fff;
-}
-
-.light-theme #theme-toggle{
-background:#2c3e50;
-border-color:#2c3e50;
-color:#fff;
-}
-
 /* LIGHT */
 .light-theme{
 background:url("../ImgWhite.png") repeat;
@@ -333,20 +301,10 @@ color:#040405;
 background:#c8cbdaa6;
 }
 
-/* ── CAMBIO 12/04/2026 ──────────────────────────────────────────
-   Se agrega color explícito a los links del nav en modo light.
-   Antes no existía esta regla y el color quedaba como #037af1
-   (azul brillante) incluso en fondo blanco, lo que era correcto
-   visualmente pero inconsistente con el resto del tema claro.
-   Se mantiene azul pero en tono más suave compatible con el tema.
-────────────────────────────────────────────────────────────────── */
-.light-theme nav ul li a{
-color:#2c3e50;
-}
-
 .light-theme li{
 background:#ecf0f1;
-color:#2c3e50;
+color:
+#2c3e50;
 }
 
 .light-theme a{
@@ -360,7 +318,8 @@ text-decoration:underline;
 
 .light-theme footer{
 background:#ecf0f1;
-color:#2c3e50;
+color:
+#2c3e50;
 }
 
 /* =========================
@@ -380,4 +339,608 @@ font-size:18px;
 .container{
 width:95%;
 }
+}  Por favor dime en línea de código comienzo a realizar las modificaciones por favor.
+11 abr
+
+Perfecto, ya tengo el CSS. Ahora necesito ver el JavaScript (Script/Script.js) para entender cómo se aplican las clases dark-theme y light-theme al cambiar de modo. ¿Me lo puedes pegar también?
+
+Mientras tanto, ya puedo ver algunos problemas claros en el CSS:
+
+Problemas identificados en la navbar:
+
+    Los links del menú tienen color:#037af1!important en nav ul li a — esto sobreescribe cualquier cambio de tema en modo light/dark.
+    La clase .light-theme header usa background:url("../ImgWhite.png") repeat pero no hay regla explícita para los colores de texto de los links dentro del nav en modo light, entonces heredan mal.
+    El .navbar base no tiene position: sticky o fixed — si lo tienes flotando sobre el contenido al hacer scroll, puede perder el backdrop en ciertos modos.
+    Conflicto entre Bootstrap y tus estilos: usas navbar-toggler de Bootstrap pero el nav tiene estilos custom que chocan con las clases de Bootstrap al colapsar.
+
+Comparte el JS y te digo exactamente en qué líneas hacer cada cambio. Así te doy las modificaciones precisas sin que tengas que adivinar nada. 🙂
+
+document.addEventListener('DOMContentLoaded', function() {      // =========================     // NAVBAR DINÁMICO SEGÚN TEMA     // =========================     const navbar = document.querySelector(".navbar");      function actualizarNavbar() {         if (document.body.classList.contains("dark-theme")) {             navbar.classList.remove("navbar-light");             navbar.classList.add("navbar-dark");         } else {             navbar.classList.remove("navbar-dark");             navbar.classList.add("navbar-light");         }     }      // =========================     // TEMA INICIAL     // =========================     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;     const userSetTheme = localStorage.getItem('theme');      if (!userSetTheme) {         document.body.classList.add(prefersDark ? 'dark-theme' : 'light-theme');     } else {         document.body.classList.add(userSetTheme);     }      actualizarNavbar(); // 🔥 IMPORTANTE      // =========================     // BOTÓN CAMBIO DE TEMA     // =========================     const themeBtn = document.getElementById('theme-toggle');      themeBtn.addEventListener('click', function() {         const body = document.body;          body.classList.toggle('dark-theme');         body.classList.toggle('light-theme');          // Guardar preferencia         const currentTheme = body.classList.contains('dark-theme') ? 'dark-theme' : 'light-theme';         localStorage.setItem('theme', currentTheme);          // Cambiar icono         let icon = this.querySelector('i');         if (!icon) {             icon = document.createElement('i');             this.textContent = '';             this.appendChild(icon);         }          icon.className = body.classList.contains('dark-theme')             ? 'fas fa-sun'             : 'fas fa-moon';          actualizarNavbar(); // 🔥 CLAVE     });      // =========================     // DESCARGA PDF     // =========================     const downloadLink = document.getElementById('downloadLink');     if (downloadLink) {         downloadLink.addEventListener('click', function(event) {             if (!confirm("El archivo PDF se abrirá en una nueva pestaña. ¿Desea continuar?")) {                 event.preventDefault();             }         });     }      // =========================     // COLLAPSIBLES     // =========================     const collapsibles = document.querySelectorAll('.collapsible-button');     collapsibles.forEach(button => {         button.addEventListener('click', function() {             this.classList.toggle('active');             const content = this.nextElementSibling;             content.style.display = (content.style.display === "block") ? "none" : "block";         });     });  });
+11 abr
+
+Perfecto, ahora tengo todo el panorama completo. Aquí están los problemas y exactamente dónde corregirlos:
+Problemas identificados
+🔴 Problema 1 — El !important bloquea el cambio de color de los links
+
+En main.css, línea ~54:
+css
+
+nav ul li a{
+  color:#037af1!important; /* ← este !important impide que .light-theme lo sobreescriba */
+
+Fix: Elimina el !important y agrega una regla específica para light-theme:
+css
+
+nav ul li a{
+  color:#037af1;
+  padding:1em;
+  display:inline-block;
 }
+
+.light-theme nav ul li a{
+  color:#2c3e50;
+}
+
+🔴 Problema 2 — El botón toggle hereda mal los estilos de Bootstrap
+
+En main.css, busca donde defines .navbar (línea ~74 aprox), agrega:
+css
+
+.light-theme #theme-toggle{
+  background:#2c3e50;
+  border-color:#2c3e50;
+  color:#fff;
+}
+
+.dark-theme #theme-toggle{
+  background:#3498db;
+  border-color:#3498db;
+  color:#fff;
+}
+
+🔴 Problema 3 — navbar-light de Bootstrap pisa tus colores en modo claro
+
+Cuando el JS agrega navbar-light, Bootstrap fuerza sus propios colores sobre el navbar. En main.css, al final de la sección THEMES agrega:
+css
+
+.light-theme .navbar.navbar-light .nav-link{
+  color:#2c3e50 !important;
+}
+
+.light-theme .navbar.navbar-light .navbar-toggler-icon{
+  filter: invert(1);
+}
+
+🟡 Problema 4 — El header en light-theme no aplica al navbar colapsado
+
+En tu sección /* LIGHT */ del CSS, la regla .light-theme header a existe (línea ~175) pero el menú colapsado de Bootstrap usa .navbar-collapse que no hereda ese color. Agrega justo debajo:
+css
+
+.light-theme .navbar-collapse .nav-link{
+  color:#2c3e50;
+}
+
+.light-theme .navbar-collapse .nav-link:hover{
+  color:#3498db;
+}
+
+🟡 Problema 5 — (JS) El icono inicial no se sincroniza con el tema guardado
+
+En Script.js, después de actualizarNavbar(); en la sección TEMA INICIAL (línea ~22 aprox), agrega esto para que el ícono del botón refleje el tema al cargar:
+javascript
+
+// Sincronizar ícono al cargar
+const icon = themeBtn.querySelector('i');
+if (icon) {
+  icon.className = document.body.classList.contains('dark-theme')
+    ? 'fas fa-sun'
+    : 'fas fa-moon';
+}
+
+Pero para que funcione, debes mover const themeBtn antes de actualizarNavbar() en el bloque de tema inicial, o simplemente poner ese bloque después de donde ya declaras themeBtn.
+Resumen de orden de cambios
+#	Archivo	Qué cambiar
+1	main.css ~línea 54	Quitar !important de nav ul li a + agregar .light-theme nav ul li a
+2	main.css final de THEMES	Agregar estilos para #theme-toggle por tema
+3	main.css final de THEMES	Agregar .light-theme .navbar.navbar-light .nav-link
+4	main.css sección LIGHT	Agregar .light-theme .navbar-collapse .nav-link
+5	Script.js ~línea 22	Sincronizar ícono al cargar página
+
+¿Quieres que te escriba el bloque CSS final completo ya con todos los cambios integrados para que solo hagas copiar/pegar?
+
+Jajaja me encantaría por si acaso no más, porque deseo aprender en este proceso modificando lo que se debe 😁 aunque e visto que cuando es así cuando se actualiza. Ahora Github me indica solo dónde efectivamente se modifico. Me gustaría que lo hicieras pero comentando en onde se hizo los cambios con fecha de 12 de abril de 2026 por favor
+11 abr
+
+¡Me alegra que quieras aprender en el proceso! Aquí tienes ambos archivos completos con los cambios comentados y fechados:
+Se crearon 2 archivos, archivo visualizado, archivo leído
+
+Aquí tienes los dos archivos listos para reemplazar directamente en tu repo. Un resumen rápido de lo que encontrarás comentado con la fecha en cada archivo:
+
+main.css — 5 bloques comentados:
+
+    Eliminación del !important en nav ul li a
+    Reglas para que navbar-light de Bootstrap no pise tus colores
+    Fix del ícono toggler (☰) en modo claro
+    Colores explícitos para el botón #theme-toggle por tema
+    Color correcto para los links del nav en modo light
+
+Script.js — 1 bloque comentado:
+
+    Sincronización del ícono (☀️/🌙) al cargar la página según el tema guardado en localStorage
+
+Cuando los subas a GitHub, el diff te va a mostrar exactamente esas líneas nuevas, que es justo lo que querías para entender qué cambió. ¡Mucho éxito con tu portafolio Luis! 🚀
+Main
+Código · CSS 
+Script
+JS 
+
+En el menu persiste la incongruencias visual pese a las mejoras en ambos temas. cómo se puede ver en el nabvar del menu. El problema radica, o al menos lo que deseo es que en ambas se vea del mismo tamaño los colores están acorde a cada tema visualmente se ve bien o al menos a mí me agrada por Fis 😁
+12:11 p.m.
+
+¡Perfecto, ahora veo exactamente el problema con las capturas! 👀
+
+Comparando ambas imágenes, el issue es claro: el botón "☰ Menu" en dark mode tiene un fondo gris oscuro visible con borde, mientras que en light mode aparece sin ese fondo, solo con borde blanco/transparente — tamaños y pesos visuales distintos.
+
+Déjame preguntarte algo antes de ajustar:
+
+P: ¿Cómo quieres que se vea el botón ☰ Menu en ambos modos?
+R: Con borde y fondo translúcido en ambos (estilo glassmorphism)
+
+P: ¿Quieres que los íconos sociales (LinkedIn, GitHub, X) también igualen su tamaño visual entre modos?
+R: No, con eso estoy bien
+12:13 p.m.
+
+Perfecto, glassmorphism en ambos modos. Aquí van los cambios — solo en main.css, el JS no necesita tocar nada esta vez.
+
+Los cambios son quirúrgicos, solo en la sección del navbar toggler:
+Archivo visualizado, editó un archivo, archivo leído
+
+Solo se modificó main.css, el Script.js queda igual que antes.
+
+¿Qué cambió exactamente? La regla vieja era una sola línea (filter:invert(1)) aplicada solo al light-theme. La nueva tiene 3 bloques:
+
+    .navbar-toggler base — fija padding, border-radius, backdrop-filter y transition iguales para ambos modos. Esto es lo que resuelve la diferencia de tamaño que veías.
+    .dark-theme .navbar-toggler — glassmorphism azul translúcido, coherente con tu paleta oscura.
+    .light-theme .navbar-toggler — glassmorphism gris claro, coherente con tu tema blanco.
+
+El ícono ☰ también se corrige: brightness(0) invert(1) en dark lo pone blanco, brightness(0) en light lo pone negro, sin depender del SVG de Bootstrap. 🙂
+Main
+Código · CSS 
+¿Quieres recibir una notificación cuando Claude responda?
+
+
+Claude es IA y puede cometer errores. Por favor, verifica nuevamente las respuestas.
+Main · CSS
+/* =========================
+   RESET
+========================= */
+body,h1,h2,h3,p,ul{
+margin:0;
+padding:0;
+list-style:none;
+}
+ 
+/* =========================
+   BASE
+========================= */
+body{
+background:url('../imagenf.png') repeat;
+font-family:Arial,sans-serif;
+line-height:1.6;
+}
+ 
+main{
+padding:2em;
+padding-bottom:100px;
+}
+ 
+.container{
+width:80%;
+margin:auto;
+overflow:hidden;
+}
+ 
+/* =========================
+   HEADER / NAV
+========================= */
+header{
+color:#f1ecec;
+padding:20px;
+min-height:90px;
+border-bottom:#3498db 1px solid;
+}
+ 
+header a{
+color:#ecf0f1;
+text-decoration:none;
+text-transform:uppercase;
+font-size:16px;
+}
+ 
+nav ul{
+background:#34495e93;
+text-align:center;
+}
+ 
+nav ul li{
+display:inline;
+}
+ 
+/* ── CAMBIO 12/04/2026 ──────────────────────────────────────────
+   Se eliminó "!important" del color de los links del nav.
+   El !important impedía que las reglas de .light-theme y .dark-theme
+   pudieran sobreescribir el color al cambiar de modo.
+   Solución: color sin !important + regla específica por tema más abajo.
+────────────────────────────────────────────────────────────────── */
+nav ul li a{
+color:#037af1;
+padding:1em;
+display:inline-block;
+}
+ 
+nav ul li a:hover{
+background:#2c3e50;
+}
+ 
+.navbar-brand{
+--bs-navbar-brand-color:#3498db;
+--bs-navbar-brand-hover-color:#d0dde6;
+}
+ 
+ 
+ 
+/* =========================
+   SHOWCASE
+========================= */
+#showcase{
+min-height:200px;
+background:url('../imagenf.png') repeat;
+text-align:center;
+color:#3498db;
+}
+ 
+#showcase h1{
+color:#bcd9fa;
+}
+ 
+/* =========================
+   SECTIONS
+========================= */
+.section{
+padding:20px;
+margin:20px 0;
+background:#111e2b;
+color:#3498db;
+}
+ 
+.section h2{
+text-align:center;
+padding:10px 0;
+color:#bcd9fa;
+}
+ 
+.section ul{
+color:#adb5bd;
+margin:20px 0;
+}
+ 
+.section li{
+background:#111e2b;
+color:#3498db;
+margin-bottom:10px;
+padding:10px;
+}
+ 
+.dark{
+background:rgba(49,49,54,.836);
+color:#ecf0f1;
+padding:15px 0;
+}
+ 
+/* =========================
+   FOOTER
+========================= */
+footer{
+background:#111e2b;
+color:#ecf0f1;
+text-align:center;
+padding:10px;
+margin-top:20px;
+}
+ 
+/* =========================
+   ACCORDION
+========================= */
+.accordion-item{
+background:#26282b;
+margin-bottom:10px;
+}
+ 
+.accordion-button{
+background:#111e2b!important;
+color:#fff!important;
+border:none;
+font-weight:bold;
+padding:10px;
+width:100%;
+}
+ 
+.accordion-button:hover{
+background:#35393d;
+}
+ 
+.accordion-button:not(.collapsed){
+background:#0d2d50;
+}
+ 
+.accordion-body{
+padding:15px;
+background:#202020;
+color:#fff;
+border-top:1px solid #ddd;
+}
+ 
+.accordion-body img{
+background:#26282b;
+max-width:100%;
+margin-bottom:15px;
+}
+ 
+.accordion-body a.btn{
+background:#26282b;
+color:#fff;
+border-radius:5px;
+padding:10px 20px;
+}
+ 
+.accordion-body a.btn:hover{
+background:#718091;
+}
+ 
+/* =========================
+   BOTONES
+========================= */
+button[type="submit"]{
+width:30%;
+margin-top:20px;
+}
+ 
+/* =========================
+   COLLAPSIBLE
+========================= */
+.collapsible-button{
+background:#3498db;
+color:#fff;
+cursor:pointer;
+padding:10px;
+width:100%;
+border:none;
+font-size:18px;
+margin:5px 0;
+}
+ 
+.content{
+display:none;
+padding:0 18px;
+}
+ 
+.active + .content{
+display:block;
+}
+ 
+/* =========================
+   THEMES
+========================= */
+ 
+/* DARK */
+.dark-theme header{
+background:#111e2b;
+}
+ 
+.dark-theme #showcase{
+background:url('../imagenf.png') repeat;
+}
+ 
+.dark-theme li{
+color:#3498db;
+}
+ 
+/* =========================
+   add. THEME for .navbar
+========================= */
+.dark-theme .navbar{
+backdrop-filter: blur(10px);
+background: rgba(17,30,43,0.8);
+}
+ 
+.light-theme .navbar{
+backdrop-filter: blur(10px);
+background: rgba(255,255,255,0.8);
+}
+ 
+.navbar{
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+}
+ 
+/* ── CAMBIO 12/04/2026 ──────────────────────────────────────────
+   Bootstrap agrega .navbar-light al cambiar de tema (via JS),
+   y sus variables CSS pisaban los colores de los links del menú.
+   Se agrega especificidad extra para forzar el color correcto
+   en modo claro tanto en desktop como en el menú colapsado mobile.
+────────────────────────────────────────────────────────────────── */
+.light-theme .navbar.navbar-light .nav-link{
+color:#2c3e50 !important;
+}
+ 
+.light-theme .navbar-collapse .nav-link{
+color:#2c3e50;
+}
+ 
+.light-theme .navbar-collapse .nav-link:hover{
+color:#3498db;
+}
+ 
+/* ── CAMBIO 12/04/2026 ──────────────────────────────────────────
+   PROBLEMA VISUAL: el botón ☰ Menu tenía apariencia distinta entre
+   dark y light mode: en dark mostraba fondo sólido gris con borde,
+   en light aparecía sin fondo visible, rompiendo la consistencia.
+ 
+   SOLUCIÓN: se unifica el botón en estilo glassmorphism para ambos
+   temas. La regla base .navbar-toggler define el tamaño, padding,
+   border-radius y transición. Luego cada tema aporta su color de
+   borde y fondo translúcido. Así ambos modos se ven del mismo
+   tamaño visual y peso, solo cambia la paleta de color.
+ 
+   Se elimina la necesidad de filter:invert() porque el ícono SVG
+   ahora se colorea con CSS directamente vía filter:brightness().
+────────────────────────────────────────────────────────────────── */
+ 
+/* Base del toggler: tamaño y forma iguales en ambos modos */
+.navbar-toggler{
+padding: 6px 12px;
+border-radius: 8px;
+border: 1px solid transparent;
+backdrop-filter: blur(8px);
+-webkit-backdrop-filter: blur(8px);
+transition: background 0.3s ease, border-color 0.3s ease;
+}
+ 
+/* Dark: glassmorphism azul oscuro */
+.dark-theme .navbar-toggler{
+background: rgba(52, 152, 219, 0.15);
+border-color: rgba(52, 152, 219, 0.4);
+color: #bcd9fa;
+}
+ 
+.dark-theme .navbar-toggler:hover{
+background: rgba(52, 152, 219, 0.28);
+border-color: rgba(52, 152, 219, 0.7);
+}
+ 
+/* Light: glassmorphism gris claro */
+.light-theme .navbar-toggler{
+background: rgba(44, 62, 80, 0.08);
+border-color: rgba(44, 62, 80, 0.3);
+color: #2c3e50;
+}
+ 
+.light-theme .navbar-toggler:hover{
+background: rgba(44, 62, 80, 0.18);
+border-color: rgba(44, 62, 80, 0.55);
+}
+ 
+/* Ícono ☰: oscuro en light, claro en dark (sin necesitar filter:invert) */
+.dark-theme .navbar-toggler-icon{
+filter: brightness(0) invert(1);
+}
+ 
+.light-theme .navbar-toggler-icon{
+filter: brightness(0);
+}
+ 
+/* ── CAMBIO 12/04/2026 ──────────────────────────────────────────
+   El botón de cambio de tema (#theme-toggle) heredaba estilos de
+   Bootstrap .btn-secondary de forma inconsistente entre modos.
+   Se definen colores explícitos para cada tema para evitar que
+   quede invisible o con bajo contraste al cambiar de modo.
+────────────────────────────────────────────────────────────────── */
+.dark-theme #theme-toggle{
+background:#3498db;
+border-color:#3498db;
+color:#fff;
+}
+ 
+.light-theme #theme-toggle{
+background:#2c3e50;
+border-color:#2c3e50;
+color:#fff;
+}
+ 
+/* LIGHT */
+.light-theme{
+background:url("../ImgWhite.png") repeat;
+color:#2c3e50;
+}
+ 
+.light-theme header{
+background:url("../ImgWhite.png") repeat;
+color:#2c3e50;
+}
+ 
+.light-theme header a{
+color:black;
+}
+ 
+.light-theme #showcase{
+background:url("../ImgWhite.png") repeat;
+color:black;
+}
+ 
+.light-theme #showcase h1{
+color:#040405;
+}
+ 
+.light-theme .section{
+background:#ecf0f1b6;
+color:#2c3e50;
+}
+ 
+.light-theme .section h2{
+color:#040405;
+}
+ 
+.light-theme nav ul{
+background:#c8cbdaa6;
+}
+ 
+/* ── CAMBIO 12/04/2026 ──────────────────────────────────────────
+   Se agrega color explícito a los links del nav en modo light.
+   Antes no existía esta regla y el color quedaba como #037af1
+   (azul brillante) incluso en fondo blanco, lo que era correcto
+   visualmente pero inconsistente con el resto del tema claro.
+   Se mantiene azul pero en tono más suave compatible con el tema.
+────────────────────────────────────────────────────────────────── */
+.light-theme nav ul li a{
+color:#2c3e50;
+}
+ 
+.light-theme li{
+background:#ecf0f1;
+color:#2c3e50;
+}
+ 
+.light-theme a{
+color:#037af1;
+}
+ 
+.light-theme a:hover{
+color:#495057;
+text-decoration:underline;
+}
+ 
+.light-theme footer{
+background:#ecf0f1;
+color:#2c3e50;
+}
+ 
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width:768px){
+ 
+#showcase h1{
+font-size:40px;
+margin-top:50px;
+}
+ 
+#showcase p{
+font-size:18px;
+}
+ 
+.container{
+width:95%;
+}
+}
+ 
+
