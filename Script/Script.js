@@ -27,12 +27,26 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.classList.add(userSetTheme);
     }
 
-    actualizarNavbar(); // 🔥 IMPORTANTE
+    actualizarNavbar();
 
     // =========================
     // BOTÓN CAMBIO DE TEMA
     // =========================
     const themeBtn = document.getElementById('theme-toggle');
+
+    // ── CAMBIO 12/04/2026 ──────────────────────────────────────────
+    // El ícono del botón no se sincronizaba con el tema al cargar
+    // la página. Si el usuario tenía guardado "light-theme" en
+    // localStorage y recargaba, el botón mostraba la luna (dark)
+    // en lugar del sol (light), porque el ícono nunca se inicializaba.
+    // Solución: leer el tema actual al arrancar y setear el ícono.
+    // ────────────────────────────────────────────────────────────────
+    const iconoInicial = themeBtn.querySelector('i');
+    if (iconoInicial) {
+        iconoInicial.className = document.body.classList.contains('dark-theme')
+            ? 'fas fa-sun'
+            : 'fas fa-moon';
+    }
 
     themeBtn.addEventListener('click', function() {
         const body = document.body;
@@ -56,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
             ? 'fas fa-sun'
             : 'fas fa-moon';
 
-        actualizarNavbar(); // 🔥 CLAVE
+        actualizarNavbar();
     });
 
     // =========================
