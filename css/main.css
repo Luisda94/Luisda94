@@ -93,9 +93,16 @@ color:#bcd9fa;
 /* =========================
    SECTIONS
 ========================= */
+/* ── CAMBIO 19/04/2026 ──────────────────────────────────────────
+   Las secciones aparecían pegadas a la izquierda en desktop y mobile.
+   margin:20px 0 no tenía margen lateral. Se agrega auto en los lados
+   y max-width para que respiren en pantallas grandes.
+────────────────────────────────────────────────────────────────── */
 .section{
 padding:20px;
-margin:20px 0;
+margin:20px auto;
+max-width:960px;
+width:90%;
 background:#111e2b;
 color:#3498db;
 }
