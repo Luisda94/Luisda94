@@ -225,9 +225,10 @@ display:block;
 /* =========================
    THEMES
 ========================= */
-
+/* Agrego img de fondo al cabezal 21-04-26*/
 /* DARK */
 .dark-theme header{
+background:url('../imagenf.png') repeat;
 background:#111e2b;
 }
 
