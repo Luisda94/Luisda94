@@ -32,8 +32,8 @@ overflow:hidden;
 ========================= */
 header{
 color:#f1ecec;
-padding:20px;
-min-height:90px;
+padding:0;
+min-height:0;
 border-bottom:#3498db 1px solid;
 }
 
