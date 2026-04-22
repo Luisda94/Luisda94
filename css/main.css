@@ -474,6 +474,15 @@ color:#fff !important;
    pero el texto también era oscuro, haciéndolo invisible.
    Se fuerza el texto a blanco solo en el hover en light-theme.
 ────────────────────────────────────────────────────────────────── */
+/* ── CAMBIO 22/04/2026 ──────────────────────────────────────────
+   Bootstrap .nav-link:hover aplicaba color gris propio pisando
+   el blanco que queríamos en el hover del menú en light-theme.
+   Se agrega selector específico para .nav-link que usa el HTML.
+────────────────────────────────────────────────────────────────── */
+.light-theme .nav-link:hover{
+color:#fff !important;
+background:#2c3e50;
+}
 .light-theme nav ul li a:hover{
 color:#fff !important;
 }
