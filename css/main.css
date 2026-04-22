@@ -49,6 +49,18 @@ background:#34495e93;
 text-align:center;
 }
 
+
+/* ── CAMBIO 22/04/2026 ──────────────────────────────────────────
+   El hover del nav usaba fondo #2c3e50 oscuro que en light-theme
+   hacía desaparecer las letras. Se cambia a un azul translúcido
+   que contrasta en ambos temas sin necesitar cambiar el texto.
+────────────────────────────────────────────────────────────────── */
+nav ul li a:hover{
+background: rgba(52, 152, 219, 0.25);
+}
+
+
+
 nav ul li{
 display:inline;
 }
