@@ -466,7 +466,16 @@ background:#3d5a73;
    Se fuerza blanco solo en ese botón para ambos temas.
 ────────────────────────────────────────────────────────────────── */
 .light-theme .btn-success{
-color:#fff;
+color:#fff !important; 
+}
+
+/* ── CAMBIO 21/04/2026 ──────────────────────────────────────────
+   En light-theme el hover del nav ponía fondo oscuro #2c3e50
+   pero el texto también era oscuro, haciéndolo invisible.
+   Se fuerza el texto a blanco solo en el hover en light-theme.
+────────────────────────────────────────────────────────────────── */
+.light-theme nav ul li a:hover{
+color:#fff !important;
 }
 /* =========================
    RESPONSIVE
