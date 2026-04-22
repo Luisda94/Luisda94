@@ -459,7 +459,7 @@ color:#fff;
 
 .light-theme .accordion-body a.btn:hover{
 background:#3d5a73;
-
+}
 /* ── CAMBIO 21/04/2026 ──────────────────────────────────────────
    El botón PayPal heredaba color:#037af1 de .light-theme a{}
    lo que hacía el texto azul ilegible sobre fondo verde.
