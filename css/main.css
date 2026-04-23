@@ -494,6 +494,14 @@ color:#fff !important;
 .light-theme .nav-link:hover{
 color:#fff !important;
 background:#2c3e50;
+}/* ── CAMBIO 22/04/2026 ──────────────────────────────────────────
+   En light-theme al desplegar el menú Bootstrap aplicaba un hover
+   gris claro sobre texto oscuro haciéndolo ilegible.
+   Se define fondo azul translúcido para el hover del menú colapsado.
+────────────────────────────────────────────────────────────────── */
+.light-theme .navbar-collapse .nav-link:hover{
+background: rgba(52, 152, 219, 0.25);
+color: #2c3e50 !important;
 }
 .light-theme nav ul li a:hover{
 color:#fff !important;
